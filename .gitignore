@@ -1,0 +1,6 @@
+// Compiled files
+*.out
+*.exe
+
+// vscode files and folders
+*/vscode/*
