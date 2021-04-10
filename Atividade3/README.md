@@ -1,5 +1,5 @@
 ## [Question 1](./1.c)
-```c#
+```c
 #include <stdio.h>
 #include <string.h>
 
@@ -31,7 +31,7 @@ int main(void){
 ```
 
 ## [Question 2](./2.c)
-```c#
+```c
 #include <stdio.h>
 
 int main(void){
@@ -81,7 +81,7 @@ int main(void){
 ```
 
 ## [Question 3](./3.c)
-```c#
+```c
 #include <stdio.h>
 #include <string.h>
 
@@ -103,7 +103,7 @@ int main(void){
 
 ## [Question 4](./4.c)
 
-```c#
+```c
 
 #include <stdio.h>
 

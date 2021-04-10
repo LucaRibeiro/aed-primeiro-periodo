@@ -1,6 +1,6 @@
 ## [Questão 1](./1.c)
 
-````c#
+```c
 #include <stdio.h>
 
 int main(void) {
@@ -15,7 +15,7 @@ int main(void) {
 
 ## [Questão 2](./2.c)
 
-````c#
+```c
 #include <stdio.h>
 #include <math.h>
 
@@ -38,7 +38,7 @@ int main(void) {
 
 ## [Questão 3](./3.c)
 
-````c#
+```c
 #include <stdio.h>
 #include <math.h>
 
@@ -61,7 +61,7 @@ int main(void) {
 
 ## [Questão 4](./4.c)
 
-````c#
+```c
 #include <stdio.h>
 #include <math.h>
 
@@ -82,7 +82,7 @@ int main(void)
 
 ## [Questão 5](./5.c)
 
-````c#
+```c
 #include <stdio.h>
 
 int main(void)
@@ -110,7 +110,7 @@ int main(void)
 
 ## [Questão 6](./6.c)
 
-````c#
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -133,7 +133,7 @@ int main(void)
 
 ## [Questão 7](./7.c)
 
-````c#
+```c
 #include <stdio.h>
 #include <math.h>
 #define PI 3.1415
@@ -158,7 +158,7 @@ int main(void)
 
 ## [Questão 8](./8.c)
 
-````c#
+```c
 #include <stdio.h>
 #include <math.h>
 
