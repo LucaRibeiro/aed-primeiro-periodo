@@ -1,10 +1,10 @@
-## Question 1
+## [Question 1](./1.c)
 ```c#
 #include <stdio.h>
 #include <string.h>
 
 int main(void){
-	// Lista de consoantes e vogais separadas por espa�o
+	// Lista de consoantes e vogais separadas por espaco
 	const char vogais[] = "a e i o u w y";
       	const char consoantes[] = "b c d f g h j k l m n p q r s t v w x z";
 	// Numero de consoantes e vogais;
@@ -16,7 +16,7 @@ int main(void){
 	
 	// Executa para cada letra dentro da palavra
 	for(int i = 0; i < strlen(palavra); i++ ){
-		// Verifica a posi�ãoda letra na lista de vogais/consoantes
+		// Verifica a posi�ãoda letra na lista de vogais/consoantes
 		// retorna "NULL" se não existir ocorrenci,caso contáio 
 		// aumenta o contador de vogais/consoantes 
 		if(strchr(vogais,palavra[i]) != NULL){
@@ -30,7 +30,7 @@ int main(void){
 }
 ```
 
-## Question 2
+## [Question 2](./2.c)
 ```c#
 #include <stdio.h>
 
@@ -80,7 +80,7 @@ int main(void){
 }
 ```
 
-## Question 3
+## [Question 3](./3.c)
 ```c#
 #include <stdio.h>
 #include <string.h>
@@ -101,7 +101,7 @@ int main(void){
 }
 ```
 
-## Question 4
+## [Question 4](./4.c)
 
 ```c#
 
