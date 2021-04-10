@@ -1,4 +1,4 @@
-## Question 1
+## [Questão 1](./1.c)
 
 ````c#
 #include <stdio.h>
@@ -13,7 +13,7 @@ int main(void) {
 
 ````
 
-## Question 2
+## [Questão 2](./2.c)
 
 ````c#
 #include <stdio.h>
@@ -36,7 +36,7 @@ int main(void) {
 }
 ````
 
-## Question 3
+## [Questão 3](./3.c)
 
 ````c#
 #include <stdio.h>
@@ -59,7 +59,7 @@ int main(void) {
 
 ````
 
-## Question 4
+## [Questão 4](./4.c)
 
 ````c#
 #include <stdio.h>
@@ -80,7 +80,7 @@ int main(void)
 
 ````
 
-## Question 5
+## [Questão 5](./5.c)
 
 ````c#
 #include <stdio.h>
@@ -108,7 +108,7 @@ int main(void)
 
 ````
 
-## Question 6
+## [Questão 6](./6.c)
 
 ````c#
 #include <stdio.h>
@@ -131,7 +131,7 @@ int main(void)
 
 ````
 
-## Question 7
+## [Questão 7](./7.c)
 
 ````c#
 #include <stdio.h>
@@ -156,7 +156,7 @@ int main(void)
 
 ````
 
-## Question 8
+## [Questão 8](./8.c)
 
 ````c#
 #include <stdio.h>
