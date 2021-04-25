@@ -1,0 +1,367 @@
+/*/ Genérico /*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.container-claro {
+    background-color: #F0F8FF;
+    color: black;
+}
+
+.container-escuro {
+    background-color: #4682B4;
+    color: white;
+}
+
+bold {
+    color: #00ddfa;
+    font-weight: bolder;
+}
+
+.disable-star {
+    opacity: 0.4 ;
+}
+
+/*/ NavBar /*/
+
+nav {
+    padding: 10%;
+    background-color: #111431;
+}
+
+.logo {
+    height: 70px;
+    width: 70px;
+}
+
+.dropdown {
+    float: right;
+    display: inline;
+}
+
+section {
+    padding: 2em 0;
+}
+
+.title-container {
+    padding-bottom: 2em;
+}
+
+/* Aba Lançamentos */
+
+#lancamentos {
+    padding: 2% 10%;
+}
+
+#lancamentos h1 {
+    text-align: center;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+}
+
+.video>iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.direcao-filme {
+    text-align: justify;
+    margin-bottom: 1em;
+}
+
+.direcao-filme>text {
+    padding-right: 1em;
+}
+
+.sinopse {
+    text-align: justify;
+    margin-top: 1em;
+}
+
+.estrela-review {
+    max-width: 1.5em;
+}
+
+.elenco {
+    margin-bottom: 1em;
+}
+
+.separador-ator {
+    margin: 0.5em;
+}
+
+.carrossel {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 1em 0;
+}
+
+.bolinha-carrossel {
+    background-color: gray;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 4px;
+}
+
+.bolinha-carrossel:nth-child(1) {
+    background-color: #6200ff;
+}
+
+/* Aba destaques */
+
+#section-destaques h1 {
+    display: inline;
+}
+
+.destaque>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2%;
+}
+
+.container-carregar-mais {
+    margin-top: 2em;
+    text-align: right;
+}
+
+.container-carregar-mais>button {
+    color: white;
+    background-color: #00ddfa;
+    border: none !important;
+}
+
+.container-carregar-mais>button:hover {
+    background-color: #6200ff;
+}
+
+/* Aba Avaliações */
+
+.avaliador-container {
+    display: flex;
+    align-items: center;
+}
+
+.avaliador-container h4 {
+    padding-left: 10%;
+}
+
+.avaliador-container img {
+    border-radius: 50%;
+    width: 20%;
+    max-height: 20%;
+}
+
+.texto-avaliacao>p {
+    text-align: justify;
+}
+
+.estrela-review_usuario>text {
+    margin-left: 1em;
+}
+
+.estrela-review_usuario {
+    width: 1.5em;
+}
+
+/* Aba Entrevistas */
+
+#entrevistas_e_makingof {
+    padding-bottom: 2em;
+}
+
+.entrevista {
+    padding: 0 1em;
+}
+
+.video_entrevista>iframe {
+    width: 100%;
+    min-height: 250px;
+}
+
+.descricao_entrevista>h5 {
+    margin: 0.75em 0;
+}
+
+.nome_diretoria {
+    display: block;
+}
+
+.descricao_entrevista>text {
+    margin-right: 1em;
+}
+
+/* Novidades */
+
+.news {
+    border-bottom: 1px solid #4682B4;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.news>img {
+    border-radius: 2%;
+    max-height: 150px;
+    max-width: 100%;
+    float: left;
+    margin: 0 1em 1em 0;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo-novidade>p {
+    text-align: justify;
+}
+
+.tag_novidade {
+    padding: 0.1em 1em;
+    border-radius: 1em;
+    margin: 0.1em 0.1em 0.1em 0;
+    font-size: 0.75em;
+    background-color: #6200ff;
+    color: white;
+    font-weight: 550;
+    display: inline-block;
+}
+
+/* Sobre */
+
+.sobre-editorial {
+    padding-left: 2em;
+}
+
+.sobre>p {
+    text-align: justify;
+}
+
+/* Editorial */
+
+.item_editorial {
+    padding: 0.5em 0;
+    display: flex;
+    align-items: center;
+}
+
+.item_editorial>img {
+    padding-right: 0.5em;
+}
+
+.editorial {
+    margin: 0.5em 0;
+}
+
+/* Redes sociais */
+
+.redes-sociais>h3 {
+    margin-bottom: 0.5em;
+}
+
+.redes-sociais>a {
+    text-decoration: none;
+}
+
+.social-media-icon {
+    max-width: 3em;
+    max-height: 3em;
+}
+
+/* Footer */
+
+footer {
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    background-color: #111431;
+    color: white;
+}
+
+/* Media Queries */
+
+/* Small */
+
+@media screen and (max-width:576px) {
+    .direcao-filme>text {
+        display: block;
+        max-width: 100%;
+    }
+    .elenco>text {
+        display: block;
+    }
+    .separador-ator {
+        display: none;
+    }
+    .dropdown {
+        display: none;
+    }
+    section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .news > img {
+        width: 100%;
+        margin-right: 0;
+    }
+    .news img {
+        max-height: 250px;
+    }
+    .container-carregar-mais {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .sobre-editorial {
+        padding-top: 1em;
+        padding-left: 1em;
+    }
+    /* Esconde cards quando ocupa a largura toda */
+    .destaque-para-esconder {
+        display: none;
+    }
+    .avaliacao_para_esconder {
+        display: none;
+    }
+}
+
+/* Large */
+
+@media screen and (max-width:992px) {
+    .descricao {
+        padding: 0;
+        margin-top: 1.5em;
+    }
+    .video_coluna {
+        padding: 0;
+    }
+    .entrevista {
+        padding: 1em;
+    }
+    #entrevistas_e_makingof {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    #section-destaques {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .destaque {
+        margin-bottom: 1em;
+    }
+    .container-carregar-mais {
+        margin-top: 1em;
+    }
+}

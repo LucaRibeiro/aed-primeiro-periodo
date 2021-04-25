@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts Google-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <!-- Scripts Bootstrap -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" 
+        crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <title>Portal de filmes</title>
+  </head>
+  <body>
+
+    <!-- Navigation Bar-->
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand col" href="#">
+        <img src="./assets/images/logo.png" class="logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse col-6" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Lançamentos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Destaques</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Avaliações</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Entrevistas & Making Of</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Novidades</a>
+          </li>
+        </ul>
+      </div>
+      <form class="form-inline">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Pesquisar Filme"
+            aria-label="Search"
+          />
+        </form>
+    </nav>   
+
+
+    <!-- Lançamentos -->
+    <main>
+        <div class="container-claro">
+            <section class="row" id="lancamentos">
+                <div class="col-12 title-container">
+                    <h1>Lançamentos</h1>
+                </div>
+
+                <div class="col-12 col-xl-6 video_coluna">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/Yh-XpUlDjJk" title="Trailer Raya e o Último Dragão" allowfullscreen></iframe>
+                    </div>
+                </div>
+    
+                <div class="col-12 col-xl-6">
+                    <h2>Raya e o Último Dragão</h2>
+                    <p class="sinopse">
+                        <bold>Sinopse:</bold> Há muito tempo, no mundo de fantasia de Kumandra, humanos e dragões viviam juntos em harmonia. 
+                        Mas quando uma força maligna ameaçou a terra, os dragões se sacrificaram para salvar a humanidade. Agora, 500 anos depois, 
+                        o mesmo mal voltou e cabe a uma guerreira solitária, Raya, rastrear o lendário último dragão para restaurar a terra despedaçada 
+                        e seu povo dividido.
+                    </p>
+                    <div class="direcao-filme">
+                        <text><bold>Direção: </bold>Carlos López Estrada, Don Hall</text>
+                        <text><bold>Roteiro: </bold>Adele Lim, Qui Nguyen</text>
+                        <text><bold>Estreia: </bold>4 de março de 2021</text>
+                    </div>
+    
+                    <div class="elenco">
+                        <p><bold>Elenco: </bold></p> 
+                        <text>Awkwafina</text><span class="separador-ator">|</span>
+                        <text>Kelly Marie Tran</text><span class="separador-ator">|</span>
+                        <text>Gemma Chan</text><span class="separador-ator">|</span>
+                        <text>Alan Tudyk</text>
+                    </div>
+    
+                    <div class="avaliacao_estrelas">
+                        <p><bold>Avaliação: </bold></p> 
+                        <div class="estrelas">
+                            <img class="estrela-review" src="/assets/images/estrela.png" alt="Star"/>
+                            <img class="estrela-review" src="/assets/images/estrela.png" alt="Star"/>
+                            <img class="estrela-review" src="/assets/images/estrela.png" alt="Star"/>
+                            <img class="estrela-review" src="/assets/images/estrela.png" alt="Star"/>
+                            <img class="estrela-review disable-star" src="/assets/images/estrela.png" alt="Star"/>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="col-12 carrossel">
+                    <div class="bolinha-carrossel"></div>
+                    <div class="bolinha-carrossel"></div>
+                    <div class="bolinha-carrossel"></div>
+                    <div class="bolinha-carrossel"></div>
+                </div>
+            </section>
+                <!-- Filme 2
+                <div class="col-12 col-xl-6 video_coluna">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/Gm3o0bfGP3g" title="YouTube video player" allowfullscreen></iframe>
+                    </div>
+                </div>
+    
+                <div class="col-12 col-xl-6">
+                    <h2>Viúva Negra</h2>
+                    <p class="sinopse">
+                        <bold>Sinopse:</bold> No novo filme da Marvel Studios, "Viúva Negra", Natasha Romanoff 
+                        (Scarlett Johansson) precisa confrontar partes de sua história quando surge uma conspiração perigosa 
+                        ligada ao seu passado. Perseguida por uma força que não irá parar até derrotá-la, Natasha terá que lidar 
+                        com sua antiga vida de espiã, e também reencontrar membros de sua família que deixou para trás antes de se 
+                        tornar parte dos Vingadores.
+                    </p>
+                    <div class="direcao-filme">
+                        <text><bold>Direção: </bold>Cate Shortland</text>
+                        <text><bold>Roteiro: </bold>Stan Lee</text>
+                        <text><bold>Estreia: </bold>2021</text>
+                    </div>
+    
+                    <div class="elenco">
+                        <p><bold>Elenco: </bold></p> 
+                        <text>Scarlett Johansson</text><span class="separador-ator">|</span>
+                        <text>Florence Pugh</text><span class="separador-ator">|</span>
+                        <text>David Harbour</text><span class="separador-ator">|</span>
+                        <text>Rachel Weisz</text>
+                    </div>
+    
+                    <div class="avaliacao_estrelas">
+                        <p><bold>Avaliação: </bold></p> 
+                        <div class="estrelas">
+                            <img class="estrela-review" src="/assets/images/estrela.png" alt="Star"/>
+                            <img class="estrela-review" src="/assets/images/estrela.png" alt="Star"/>
+                            <img class="estrela-review" src="/assets/images/estrela.png" alt="Star"/>
+                            <img class="estrela-review" src="/assets/images/estrela.png" alt="Star"/>
+                            <img class="estrela-review disable-star" src="/assets/images/estrela.png" alt="Star"/>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="col-12 carrossel">
+                    <div class="bolinha-carrossel"></div>
+                    <div class="bolinha-carrossel"></div>
+                    <div class="bolinha-carrossel"></div>
+                    <div class="bolinha-carrossel"></div>
+                </div>
+            </section>
+            -->
+        
+        </div>
+        
+        <!-- Seção "Em destaque" -->
+        <div class="container-escuro">
+            <div class="container">
+                <section class="row" id="section-destaques">
+                    <div class="col-12 title-container">
+                        <h1>Em destaque</h1>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton">
+                            Categoria: Todos
+                            </button>
+                        </div>
+                    </div>  
+                    
+                    <div class="col-12 col-sm-6 col-lg-3 destaque">
+                        <img src="/assets/images/destaques/destaque-01.jpg" alt="Destaque 01">
+                    </div>
+        
+                    <div class="col-12 col-sm-6 col-lg-3 destaque">
+                        <img src="/assets/images/destaques/destaque-02.jpg" alt="Destaque 02">
+                    </div>
+        
+                    <div class="col-12 col-sm-6 col-lg-3 destaque destaque-para-esconder">
+                        <img src="/assets/images/destaques/destaque-03.jpg" alt="Destaque 03">
+                    </div>
+        
+                    <div class="col-12 col-sm-6 col-lg-3 destaque destaque-para-esconder">
+                        <img src="/assets/images/destaques/destaque-04.jpg" alt="Destaque 04">
+                    </div>
+                    
+                    <div class="col-12 container-carregar-mais">
+                        <button type="button" class="btn btn-outline-warning carregar-mais">Carregar mais filmes</button>
+                    </div>
+                </section>
+            </div>
+        
+        <!-- Seção "Avaliações" -->
+        <div class="container-claro">   
+            <div class="container">    
+                <section class="row container-claro" id="avaliacoes">
+                    <div class="title-container">
+                        <h1>Últimas avaliações</h1>
+                    </div>
+        
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 avaliacao">
+                        <div class="avaliador-container">
+                            <img src="/assets/images/avaliadores/avaliador-01.png" alt="Avaliador 01">
+                            <h4>Luiz Andrade</h4>
+                        </div>
+                        
+                        <div class="conteudo-avaliacao">
+                            <div class="texto-avaliacao">
+                                <p>
+                                    <bold>Avaliação: </bold> "Minari - Em buca da Felicidade"<br>
+                                    Filme indicado a melhor filme! Merecido? pode até ser, mas tem falhas de desenvolvimento 
+                                    claros e um roteiro que perde excelência em certos momentos. Pontos alto para os conflitos 
+                                    na história existente e o bom elenco.
+                                </p>
+                            </div>
+        
+                            <div class="estrela-avaliacao-usuario">
+                                <img class="estrela-review_usuario" src="/assets/images/estrela.png" alt="Star"/>
+                                <img class="estrela-review_usuario" src="/assets/images/estrela.png" alt="Star"/>
+                                <img class="estrela-review_usuario" src="/assets/images/estrela.png" alt="Star"/>
+                                <img class="estrela-review_usuario" src="/assets/images/estrela.png" alt="Star"/>
+                                <img class="estrela-review_usuario disable-star" src="/assets/images/estrela.png" alt="Star"/>
+                                <text><bold>25/04/2021</bold><text>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 avaliacao">
+                        <div class="avaliador-container">
+                            <img src="/assets/images/avaliadores/avaliador-02.png" alt="Avaliador 02">
+                            <h4>André Botelo</h4>
+                        </div>
+                        
+                        <div class="conteudo-avaliacao">
+                            <div class="texto-avaliacao">
+                                <p>
+                                    <bold>Avaliação: </bold> "Tom & Jerry: O Filme"<br>
+                                    Muito se especulou sobre a necessidade da realização do filme e
+                                    qual impacto geraria. Vale pela nostalgia da infância, algumas piadas funcionam, mas o meio do filme é um pouco arrastado, mas dá pra se divertir!
+                                </p>
+                            </div>
+                            
+        
+                            <div class="estrela-avaliacao-usuario">
+                                <img class="estrela-review_usuario" src="/assets/images/estrela.png" alt="Star"/>
+                                <img class="estrela-review_usuario" src="/assets/images/estrela.png" alt="Star"/>
+                                <img class="estrela-review_usuario" src="/assets/images/estrela.png" alt="Star"/>
+                                <img class="estrela-review_usuario disable-star" src="/assets/images/estrela.png" alt="Star"/>
+                                <img class="estrela-review_usuario disable-star" src="/assets/images/estrela.png" alt="Star"/>
+                                <text><bold>19/03/2021</bold><text>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 avaliacao avaliacao_para_esconder">
+                        <div class="avaliador-container">
+                            <img src="/assets/images/avaliadores/avaliador-03.png" alt="Avaliador 03">
+                            <h4>Amanda Neves</h4>
+                        </div>
+                        
+                        <div class="conteudo-avaliacao">
+                            <div class="texto-avaliacao">
+                                <p>
+                                    <bold>Avaliação: </bold> "Interestelar"<br>
+                                    Filmaço E S P E T A C U L A R! Uma obra prima para o futuro com certeza. 
+                                    Um elenco de primeiríssima com atuações magistrais. 
+                                    Ficção Cientifica com um drama muito bem contado. Roteiro bem construído.
+                                </p>
+                            </div>
+        
+                            <div class="estrela-avaliacao-usuario">
+                                <img class="estrela-review_usuario" src="/assets/images/estrela.png" alt="Star"/>
+                                <img class="estrela-review_usuario" src="/assets/images/estrela.png" alt="Star"/>
+                                <img class="estrela-review_usuario" src="/assets/images/estrela.png" alt="Star"/>
+                                <img class="estrela-review_usuario" src="/assets/images/estrela.png" alt="Star"/>
+                                <img class="estrela-review_usuario" src="/assets/images/estrela.png" alt="Star"/>
+                                <text><bold>15/02/2021</bold><text>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-12 container-carregar-mais">
+                        <button type="button" class="btn btn-outline-warning carregar-mais">Carregar mais avaliações</button>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+        
+        <div class="container-escuro">
+            <div class="container">
+                <section class="row" id="entrevistas_e_makingof">
+                    <div class="col-12 title-container">
+                        <h1>Entrevistas & Making-of</h1>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-lg-4 entrevista">
+                        <div class="video_entrevista">
+                            <iframe src="https://www.youtube.com/embed/0fq5u7-ub6A" title="O Poço explicado em detalhes que talvez você tenha perdido" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="descricao_entrevista">
+                            <h5><bold>Filme: </bold>O Poço</h5>
+                            <text class="nome_diretoria"><bold>Diretoria: </bold>Galder Gaztelu-Urrutia</text>
+                            <text><bold>Roteiro: </bold>David Desola, Pedro Rivero</text>
+                            <text><bold>Estreia: </bold>2020</text>
+                        </div>
+                    </div>
+        
+                    <div class="col-12 col-sm-12 col-lg-4 entrevista">
+                        <div class="video_entrevista">
+                            <iframe src="https://www.youtube.com/embed/tjsUt6YW9go" title="GO BEHIND THE SCENES OF INTERSTELLAR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="descricao_entrevista">
+                            <h5><bold>Filme: </bold>Interestelar</h5>
+                            <text class="nome_diretoria"><bold>Diretoria: </bold>Christopher Nolan</text>
+                            <text><bold>Roteiro: </bold>Christopher Nolan, Jonathan Nolan</text>
+                            <text><bold>Estreia: </bold>2014</text>
+                        </div>
+                    </div>
+                    
+        
+                    <div class="col-12 col-sm-12 col-lg-4 entrevista">
+                        <div class="video_entrevista">
+                            <iframe src="https://www.youtube.com/embed/mox0_xGO-Do" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                            <div class="descricao_entrevista">
+                            <h5><bold>Filme: </bold>Batman vs Superman: A Origem da Justiça</h5>
+                            <text class="nome_diretoria"><bold>Diretoria: </bold> Zack Snyder</text>
+                            <text><bold>Roteiro: </bold>Chris Terrio, David S. Goyer</text>
+                            <text><bold>Estreia: </bold>2016</text>
+                        </div>
+
+                    </div>
+        
+                    <div class="col-12 container-carregar-mais">
+                        <button type="button" class="btn btn-outline-warning carregar-mais">Carregar mais filmes</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <!-- Container de novidades, sobre e editorial -->
+        <div class="container-claro">
+            <div class="container"> 
+                <section class="row">
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 novidades">
+                        <!-- Novidades -->
+                        <div class="title-container">
+                            <h1>Novidades</h1>
+                        </div>
+
+                        <div class="news">
+                            <img src="/assets/images/novidades/novidade-01.jpg" alt="Novidade 01">
+                            
+                            <div class="conteudo-novidade">
+                                <h5>Marvel confirma Capitão América 4</h5>
+                                <p>
+                                    Horas depois de o Disney+ disponibilizar o último episódio de O Falcão e o Soldado Invernal, 
+                                    o Marvel Studios confirmou a produção de Capitão América 4. Segundo o THR, o filme será escrito 
+                                    por Malcolm Spelman.
+                                </p>
+                                <div class="tags">
+                                    <text class="tag_novidade">MCU</text>
+                                    <text class="tag_novidade">Nova produção</text>
+                                    <text class="tag_novidade">Heróis</text>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news">
+                            <img src="/assets/images/novidades/novidade-02.jpg" alt="Novidade 02">
+                            
+                            <div class="conteudo-novidade">
+                                <h5>Amor, Sublime Amor terá trailer revelado durante o Oscar 2021</h5>
+                                <p>
+                                    West Side Story (sem título em português revelado), remake do musical Amor, Sublime Amor, 
+                                    dirigido por Steven Spielberg, terá o seu primeiro trailer revelado durante o Oscar de 2021. 
+                                </p>
+                                <div class="tags">
+                                    <text class="tag_novidade">Oscar</text>
+                                    <text class="tag_novidade">Trailer</text>
+                                    <text class="tag_novidade">Remake</text>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news">
+                            <img src="/assets/images/novidades/novidade-03.jpg" alt="Novidade 03">
+                            
+                            <div class="conteudo-novidade">
+                                <h5>Filmes do Homem-Aranha poderão ir para o Disney+</h5>
+                                <p>
+                                    Pouco após a Sony anunciar um acordo de exclusividade com a Netflix, 
+                                    foi anunciado agora que a Disney também negociou uma janela de exibição com o estúdio,
+                                    que fará filmes como Homem-Aranha elegíveis para entrar no catálogo do Disney+.
+                                </p>
+                                <div class="tags">
+                                    <text class="tag_novidade">Disney+</text>
+                                    <text class="tag_novidade">Sony</text>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+        
+                    <!-- Container Sobre e editorial -->
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 sobre-editorial">
+                        <!-- Sobre -->
+                        <div class="sobre">
+                            <div class="title-container">
+                                <h1>Sobre</h1>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis lacinia felis. Aliquam vitae consectetur libero. 
+                                Nam nibh risus, feugiat varius euismod vitae, luctus vel velit. Aliquam at purus metus. Etiam tempus viverra lorem, ac molestie 
+                                dolor ultricies a. Donec dictum cursus malesuada.
+                            </p>
+                        </div>
+                        <!-- Editorial -->
+                        <div class="editorial">                        
+                            <h1>Editorial</h1>
+                            <div class="item_editorial">
+                                <img src="/assets/images/perfil_amarelo.png" alt="Icone de uma pessoa">
+                                <text><bold>Redação: </bold> Fulano de tal</text>
+                            </div>
+                            <div class="item_editorial">
+                                <img src="/assets/images/perfil_amarelo.png" alt="Icone de uma pessoa">
+                                <text><bold>Pesquisa: </bold> Sicrano de lá</text>
+                            </div>
+                            <div class="item_editorial">
+                                <img src="/assets/images/perfil_amarelo.png" alt="Icone de uma pessoa">
+                                <text><bold>Gerente Geral: </bold> Beltrano da casa ao lado</text>
+                            </div>
+                        </div>
+                        <div class="redes-sociais">
+                            <h3>Redes sociais</h3>
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img class="social-media-icon" src="/assets/images/redes_sociais/facebook-logo.png" alt="facebook">
+                            </a>
+
+                            <a href="https://www.twitter.com" target="_blank">
+                                <img class="social-media-icon" src="/assets/images/redes_sociais/twitter-logo.png" alt="twitter">
+                            </a>
+                            <a href="https://www.instagram.com" target="_blank">
+                                <img class="social-media-icon" src="/assets/images/redes_sociais/instagram-logo.png" alt="instagram">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </main>
+   
+    <footer>
+        <text class="col">Copyright 2021 - Disciplina de Desenvolvimento de interface Web - <bold> ICEI PUC Minas<bold> </text>
+        <img class="logo" src="./assets/images/logo.png" class="logo" />
+    </footer>
+
+  </body>
+</html>
