@@ -12,9 +12,11 @@ My codes made during my Bachelor Degree in Computer Science at PUC-MG.
 <h2> Content Table </h2>
 <table>
   <tr>
-    <th><a href="./AED">Algortimo e Estrutura de Dados</a></th>
+    <th><a href="./AED">AED</a></th>
+    <th>Algoritmo e Estrutura de Dados</th>
   </tr>
   <tr>
-    <th><a href="./DIW">Desenvolvimento de Interfaces Web</a></th>
+    <th><a href="./DIW">DIW</a></th>
+    <th>Desenvolvimento de Interfaces Web</th>
   </tr>
 </table>
