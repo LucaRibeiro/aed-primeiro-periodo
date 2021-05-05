@@ -12,19 +12,9 @@ My codes made during my Bachelor Degree in Computer Science at PUC-MG.
 <h2> Content Table </h2>
 <table>
   <tr>
-    <th>Matéria</th>
-    <th>Projeto</th>
+    <th><a href="./AED">Algortimo e Estrutura de Dados</a></th>
   </tr>
   <tr>
-    <th>Algortimo e Estrutura de Dados</th>
-    <th><a href="./AED/Atividade1">Atividade 1</a></th>
-  </tr>
-  <tr>
-    <th>Algortimo e Estrutura de Dados</th>
-    <th><a href="./AED/Atividade2">Atividade 2</a></th>
-  </tr>
-  <tr>
-    <th>Algortimo e Estrutura de Dados</th>
-    <th><a href="./AED/Atividade3">Atividade 3</a></th>
+    <th><a href="./DIW">Desenvolvimento de Interfaces Web</a></th>
   </tr>
 </table>
