@@ -1,5 +1,7 @@
 ## [Questão 1](./1.c)
 
+![Enunciado 1](./assets/01.png)
+
 ```c
 #include <stdio.h>
 
@@ -10,10 +12,11 @@ int main(void) {
     printf("Ola, %s", nomeCompleto);
    return 0
 }
-
-````
+```
 
 ## [Questão 2](./2.c)
+
+Faça um programa que calcule a altura, o perímetro e a área de um triângulo equilátero  (possui todos lados iguais). O usuário deve informar o tamanho do lado.
 
 ```c
 #include <stdio.h>
@@ -34,9 +37,20 @@ int main(void) {
     printf("\nAltura: %.2f", altura);
    return 0;
 }
-````
+```
 
 ## [Questão 3](./3.c)
+
+A queda livre de um objeto (desconsiderando qualquer forma de resistência) é dada pela equação: 
+Fórmula: d = 1/2 * g * (t^2)
+Onde "d' é o deslocamento, "g" a aceleração da gravidade (9,81m/s² na Terra) e "t" o tempo.
+
+Faça um programa que calcule a distância percorrida por um objeto abandonado no ar após um dado tempo em segundos informado pelo usuário. 
+
+O programa deve.
+- Pedir ao usuário que informe o tempo em segundos
+- Calcular a distância percorrida
+- Escreve a distância em metros.
 
 ```c
 #include <stdio.h>
@@ -57,9 +71,11 @@ int main(void) {
    return 0;
 }
 
-````
+```
 
 ## [Questão 4](./4.c)
+
+![Enunciado 4](./assets/04.png)
 
 ```c
 #include <stdio.h>
@@ -78,9 +94,21 @@ int main(void)
     return 0;
 }
 
-````
+```
 
 ## [Questão 5](./5.c)
+
+ALGORITMO
+    ESCREVER "Digite a distância"
+    LER distancia
+    ESCREVER "Informe o gasto médio do veículo(km/L)"LERkmL
+    ESCREVER "Informe o custo do combustível(R$/L)"
+    LER precoCombustivel
+    ESCREVER "Informe total de pedágios" 
+    LER precoPedagios
+    totalViagem = distancia * precoCombustivo/kmL + precoPedagios
+    ESCREVER "A viagem custará:", totalViagem
+FIM_ALGORITMO
 
 ```c
 #include <stdio.h>
@@ -106,9 +134,11 @@ int main(void)
     return 0;
 }
 
-````
+```
 
 ## [Questão 6](./6.c)
+
+Foram formados grupos com números de integrantes diferentes.A cada integrante é dado um número por ordemal fabética.É necessário escolher aleatoriamente um integrante para representar o grupo. Crie um programa que, dado o número de integrantes,escolha aleatoriamente um número.
 
 ```c
 #include <stdio.h>
@@ -129,9 +159,11 @@ int main(void)
     return 0;
 }
 
-````
+```
 
 ## [Questão 7](./7.c)
+Faça uma calculadora que,dado um ângulo em graus, calcule Seno, Cosseno e Tangente desse ângulo. Lembre-se que o valor passado para a função deve ser dado em radianos.
+radianos = graus * PI/180
 
 ```c
 #include <stdio.h>
@@ -154,9 +186,25 @@ int main(void)
     return 0;
 }
 
-````
+```
 
-## [Questão 8](./8.c)
+## [Questão 8 ] (./8.c)
+ALGORITMO
+    TAXA=0.08
+    JUROS= 0.0025
+    MULTA=0.4
+    ESCREVER "Informe o período em meses:" 
+    LER meses
+    ESCREVER "Informe o valor do salário base:" 
+    LER salario
+    depositoMensal = salario * TAXA
+    ESCREVER "Depósito mensal R$:", depositoMensal
+    saldoCorrigido = depositoMensal * (1+JUROS) * (((1+JUROS)^meses)-1))/JUROS
+    ESCREVER "Saldo Corrigido R$:", 
+    saldoCorrigidomulta = saldoCorrigido * MULTA
+    ESCREVER" Multa por demissão R$:",multatotal = saldoCorrigido + multa
+    ESCREVER "TotalFGTS mais 40% de multa",total
+FIM_ALGORITMO
 
 ```c
 #include <stdio.h>
@@ -195,4 +243,4 @@ int main()
 
     return 1;
 }
-````
+```
