@@ -28,7 +28,7 @@ My codes made during my Bachelor Degree in Computer Science at PUC-MG.
     <th>Loops</th>
   </tr>
     <tr>
-    <th><a href="./04-Funções/">04</a></th>
+    <th><a href="./04-Funcoes/">04</a></th>
     <th>Funções</th>
   </tr>
     <tr>
