@@ -1,5 +1,6 @@
 ## [Questão 1](./1.c)
-
+#### Enunciado:
+````
 ALGORITMO
 	num1 = valor aleatório entre 0 e 10 
 		ESCREVA "Adivinhe o número:"
@@ -12,7 +13,8 @@ ALGORITMO
 		ESCREVA "Você errou, chute alto!"
 	ESCREVA "O número era: ", num1, "Fim do jogo"
 FIM_ALGORITMO
-
+````
+#### Código:
 ```c
 #include <stdio.h>
 #include <stdlib.h>

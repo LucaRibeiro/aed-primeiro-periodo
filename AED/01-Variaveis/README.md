@@ -97,7 +97,8 @@ int main(void)
 ```
 
 ## [Questão 5](./5.c)
-
+#### Enunciado:
+````
 ALGORITMO
     ESCREVER "Digite a distância"
     LER distancia
@@ -109,7 +110,8 @@ ALGORITMO
     totalViagem = distancia * precoCombustivo/kmL + precoPedagios
     ESCREVER "A viagem custará:", totalViagem
 FIM_ALGORITMO
-
+````
+#### Código:
 ```c
 #include <stdio.h>
 
@@ -189,7 +191,8 @@ int main(void)
 ```
 
 ## [Questão 8 ] (./8.c)
-
+#### Enunciado:
+````
 ALGORITMO
     TAXA=0.08
     JUROS= 0.0025
@@ -201,13 +204,14 @@ ALGORITMO
     depositoMensal = salario * TAXA
     ESCREVER "Depósito mensal R$:", depositoMensal
     saldoCorrigido = depositoMensal * (1+JUROS) * (((1+JUROS)^meses)-1))/JUROS
-    ESCREVER "Saldo Corrigido R$:", 
-    saldoCorrigidomulta = saldoCorrigido * MULTA
+    ESCREVER "Saldo Corrigido R$:", saldoCorrigido
+    multa = saldoCorrigido * MULTA
     ESCREVER "Multa por demissão R$:", multa
     total = saldoCorrigido + multa
     ESCREVER "Total FGTS mais 40% de multa", total
 FIM_ALGORITMO
-
+````
+#### Código:
 ```c
 #include <stdio.h>
 #include <math.h>
