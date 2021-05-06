@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function to make files and folders
 void makeFolders(){
 	#ifdef _WIN32
 		system("md exercicio; md avaliacoes; md notas");
@@ -12,7 +11,5 @@ void makeFolders(){
 
 int main(){
 	makeFolders();
-	
 	return 0;
-
 }

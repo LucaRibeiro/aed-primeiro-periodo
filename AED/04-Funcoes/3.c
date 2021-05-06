@@ -1,28 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Return the  higher value between two numbers
 int max(int a, int b){
 	if(a > b){
 		return a;
-	 } else {
-		return b;
-	 }
+	}
+	return b;
 }
 
-// Return the lower value between two numbers
 int min(int a, int b){
 	if(a < b){
-	       return a;
-	} else {
-		return b;	
+	    return a;
 	}
+	return b;	
 }
 
-// Return the difference between two numbers
 int diff(int a, int b){
 	int higher = max(a,b);
-       	printf("\n %i eh o maior", higher);
+    printf("\n %i eh o maior", higher);
 	
 	int lower = min(a,b);
 	printf("\n %i eh o menor", lower);
