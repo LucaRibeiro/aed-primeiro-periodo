@@ -16,7 +16,7 @@ int main(void) {
 
 ## [Questão 2](./2.c)
 
-Faça um programa que calcule a altura, o perímetro e a área de um triângulo equilátero  (possui todos lados iguais). O usuário deve informar o tamanho do lado.
+Faça um programa que calcule a altura, o perímetro e a área de um triângulo equilátero (possui todos lados iguais). O usuário deve informar o tamanho do lado.
 
 ```c
 #include <stdio.h>
@@ -138,7 +138,7 @@ int main(void)
 
 ## [Questão 6](./6.c)
 
-Foram formados grupos com números de integrantes diferentes.A cada integrante é dado um número por ordemal fabética.É necessário escolher aleatoriamente um integrante para representar o grupo. Crie um programa que, dado o número de integrantes,escolha aleatoriamente um número.
+Foram formados grupos com números de integrantes diferentes.A cada integrante é dado um número por ordemal fabética. É necessário escolher aleatoriamente um integrante para representar o grupo. Crie um programa que, dado o número de integrantes,escolha aleatoriamente um número.
 
 ```c
 #include <stdio.h>
@@ -162,7 +162,7 @@ int main(void)
 ```
 
 ## [Questão 7](./7.c)
-Faça uma calculadora que,dado um ângulo em graus, calcule Seno, Cosseno e Tangente desse ângulo. Lembre-se que o valor passado para a função deve ser dado em radianos.
+Faça uma calculadora que, dado um ângulo em graus, calcule Seno, Cosseno e Tangente desse ângulo. Lembre-se que o valor passado para a função deve ser dado em radianos.
 radianos = graus * PI/180
 
 ```c
@@ -189,6 +189,7 @@ int main(void)
 ```
 
 ## [Questão 8 ] (./8.c)
+
 ALGORITMO
     TAXA=0.08
     JUROS= 0.0025
@@ -202,8 +203,9 @@ ALGORITMO
     saldoCorrigido = depositoMensal * (1+JUROS) * (((1+JUROS)^meses)-1))/JUROS
     ESCREVER "Saldo Corrigido R$:", 
     saldoCorrigidomulta = saldoCorrigido * MULTA
-    ESCREVER" Multa por demissão R$:",multatotal = saldoCorrigido + multa
-    ESCREVER "TotalFGTS mais 40% de multa",total
+    ESCREVER "Multa por demissão R$:", multa
+    total = saldoCorrigido + multa
+    ESCREVER "Total FGTS mais 40% de multa", total
 FIM_ALGORITMO
 
 ```c
