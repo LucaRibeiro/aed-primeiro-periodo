@@ -1,6 +1,7 @@
 // Compiled files
+/build/
 *.out
 *.exe
 
 // vscode files and folders
-*/vscode/*
+.vscode
