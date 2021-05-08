@@ -16,11 +16,8 @@ int min(int a, int b){
 }
 
 int diff(int a, int b){
-	int higher = max(a,b);
-    printf("\n %i eh o maior", higher);
-	
+	int higher = max(a,b);	
 	int lower = min(a,b);
-	printf("\n %i eh o menor", lower);
 
 	return (higher - lower);
 }
@@ -28,13 +25,12 @@ int diff(int a, int b){
 int main(){
 	int a,b;
 
-	printf("\nInsira o primeiro numero: ");
+	printf("\nInsira dois valoress: ");
 	scanf("%i", &a);
-	printf("\nInsira o segundo numero: ");
 	scanf("%i", &b);
 	int difference = diff(a,b);
 
-	printf("\nA diferenca entre os numeros %i e %i eh %i", a, b, difference);
+	printf("\nDiferenca: %i", difference);
 	return 0;
 
 }
