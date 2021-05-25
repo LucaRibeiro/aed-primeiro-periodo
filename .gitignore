@@ -1,7 +1,12 @@
-// Compiled files
+# Compress Archives
+*.zip
+*.tar
+*.gz
+
+# Compiled files
 build
 *.out
 *.exe
 
-// vscode files and folders
+# vscode files and folders
 .vscode
