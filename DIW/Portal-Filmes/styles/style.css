@@ -110,18 +110,6 @@ section {
   margin: 2em 0 1em 0;
 }
 
-.bolinha-carrossel {
-  background-color: gray;
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 4px;
-}
-
-.bolinha-carrossel:nth-child(1) {
-  background-color: #6200ff;
-}
 
 /* Aba destaques */
 
