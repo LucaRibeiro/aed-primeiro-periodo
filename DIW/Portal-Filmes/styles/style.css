@@ -96,7 +96,7 @@ section {
   margin-top: 1em;
 }
 
-.estrela-review {
+.review-star {
   max-width: 1.5em;
 }
 
@@ -130,15 +130,18 @@ section {
 
 /* Aba destaques */
 
-#section-destaques h1 {
+#section-destaques h1,
+#section-search h1 {
   display: inline;
 }
 
-.destaque {
+.destaque,
+.search-results {
   margin-top: 2%;
 }
 
-.destaque img {
+.destaque img,
+.search-results img {
   width: 100%;
   height: 100%;
   border-radius: 2%;
@@ -176,11 +179,11 @@ section {
   text-align: justify;
 }
 
-.estrela-review_usuario > text {
+.review-star_usuario > text {
   margin-left: 1em;
 }
 
-.estrela-review_usuario {
+.review-star_usuario {
   width: 1.5em;
 }
 
@@ -406,12 +409,14 @@ footer {
     display: flex;
     justify-content: center;
   }
-  #section-destaques {
+  #section-destaques,
+  #section-search {
     align-items: center;
     display: flex;
     justify-content: center;
   }
-  .destaque {
+  .destaque,
+  .search-results {
     margin-bottom: 1em;
   }
   .container-carregar-mais {

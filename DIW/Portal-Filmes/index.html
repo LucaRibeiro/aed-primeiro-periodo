@@ -22,9 +22,10 @@
 
 <body onload="getTopRated()">
 
+
     <!-- Navigation Bar-->
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand col" href="#">
+        <a class="navbar-brand col" href="/index.html#">
             <img src="./assets/images/logo.png" class="logo" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -35,99 +36,238 @@
         <div class="collapse navbar-collapse col-6" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#lancamentos">Lançamentos</a>
+                    <a class="nav-link" href="/index.html#lancamentos">Lançamentos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#section-destaques">Destaques</a>
+                    <a class="nav-link" href="/index.html#section-destaques">Destaques</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#avaliacoes">Avaliações</a>
+                    <a class="nav-link" href="/index.html#avaliacoes">Avaliações</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#entrevistas_e_makingof">Entrevistas & Making Of</a>
+                    <a class="nav-link" href="/index.html#entrevistas_e_makingof">Entrevistas & Making Of</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#novidades">Novidades</a>
+                    <a class="nav-link" href="/index.html#novidades">Novidades</a>
                 </li>
             </ul>
         </div>
         <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar Filme" aria-label="Search" />
+            <input id="input-search" class="form-control mr-sm-2" type="search" placeholder="Pesquisar Filme" aria-label="Search" />
         </form>
-        <img id="search-button" src="assets/images/search-icon.png" alt="Busca por filme." onclick="searchMovie">
+        <a href="search.html" onclick="setKeywordSearch()">
+            <img id="search-button" src="assets/images/search-icon.png" alt="Busca por filme.">
+        </a>
     </nav>
 
 
     <!-- Lançamentos -->
     <main>
-        <div class="container-claro">
-            <section class="row" id="lancamentos">
-                <div class="col-12 title-container">
-                    <h1>Lançamentos</h1>
-                </div>
-
-                <div class="col-12 col-xl-6 video_coluna">
-                    <div class="video">
-                        <iframe src="https://www.youtube.com/embed/Yh-XpUlDjJk" title="Trailer Raya e o Último Dragão"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
-
-                <div class="col-12 col-xl-6">
-                    <h2>Raya e o Último Dragão</h2>
-                    <p class="sinopse">
-                        <bold>Sinopse:</bold> Há muito tempo, no mundo de fantasia de Kumandra, humanos e dragões viviam
-                        juntos em harmonia.
-                        Mas quando uma força maligna ameaçou a terra, os dragões se sacrificaram para salvar a
-                        humanidade. Agora, 500 anos depois,
-                        o mesmo mal voltou e cabe a uma guerreira solitária, Raya, rastrear o lendário último dragão
-                        para restaurar a terra despedaçada
-                        e seu povo dividido.
-                    </p>
-                    <div class="direcao-filme">
-                        <text>
-                            <bold>Direção: </bold>Carlos López Estrada, Don Hall
-                        </text>
-                        <text>
-                            <bold>Roteiro: </bold>Adele Lim, Qui Nguyen
-                        </text>
-                        <text>
-                            <bold>Estreia: </bold>4 de março de 2021
-                        </text>
-                    </div>
-
-                    <div class="elenco">
-                        <p>
-                            <bold>Elenco: </bold>
-                        </p>
-                        <text>Awkwafina</text><span class="separador-ator">|</span>
-                        <text>Kelly Marie Tran</text><span class="separador-ator">|</span>
-                        <text>Gemma Chan</text><span class="separador-ator">|</span>
-                        <text>Alan Tudyk</text>
-                    </div>
-
-                    <div class="avaliacao_estrelas">
-                        <p>
-                            <bold>Avaliação: </bold>
-                        </p>
-                        <div class="estrelas">
-                            <img class="estrela-review" src="assets/images/estrela.png" alt="Star" />
-                            <img class="estrela-review" src="assets/images/estrela.png" alt="Star" />
-                            <img class="estrela-review" src="assets/images/estrela.png" alt="Star" />
-                            <img class="estrela-review" src="assets/images/estrela.png" alt="Star" />
-                            <img class="estrela-review disable-star" src="assets/images/estrela.png" alt="Star" />
+        <div id="carousel-release" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-release" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-release" data-slide-to="1"></li>
+                <li data-target="#carousel-release" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <section class="row" id="lancamentos">
+                        <div class="col-12 title-container">
+                            <h1>Lançamentos</h1>
                         </div>
-                    </div>
 
+                        <div class="col-12 col-xl-6 video_coluna">
+                            <div class="video">
+                                <iframe src="https://www.youtube.com/embed/Yh-XpUlDjJk"
+                                    title="Trailer Raya e o Último Dragão" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-xl-6">
+                            <h2>Raya e o Último Dragão</h2>
+                            <p class="sinopse">
+                                <bold>Sinopse:</bold> Há muito tempo, no mundo de fantasia de Kumandra, humanos e
+                                dragões viviam
+                                juntos em harmonia.
+                                Mas quando uma força maligna ameaçou a terra, os dragões se sacrificaram para salvar a
+                                humanidade. Agora, 500 anos depois,
+                                o mesmo mal voltou e cabe a uma guerreira solitária, Raya, rastrear o lendário último
+                                dragão
+                                para restaurar a terra despedaçada
+                                e seu povo dividido.
+                            </p>
+                            <div class="direcao-filme">
+                                <text>
+                                    <bold>Direção: </bold>Carlos López Estrada, Don Hall
+                                </text>
+                                <text>
+                                    <bold>Roteiro: </bold>Adele Lim, Qui Nguyen
+                                </text>
+                                <text>
+                                    <bold>Estreia: </bold>4 de março de 2021
+                                </text>
+                            </div>
+
+                            <div class="elenco">
+                                <p>
+                                    <bold>Elenco: </bold>
+                                </p>
+                                <text>Awkwafina</text><span class="separador-ator">|</span>
+                                <text>Kelly Marie Tran</text><span class="separador-ator">|</span>
+                                <text>Gemma Chan</text><span class="separador-ator">|</span>
+                                <text>Alan Tudyk</text>
+                            </div>
+
+                            <div class="avaliacao_estrelas">
+                                <p>
+                                    <bold>Avaliação: </bold>
+                                </p>
+                                <div class="estrelas">
+                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
+                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
+                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
+                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
+                                    <img class="review-star disable-star" src="assets/images/estrela.png" alt="Star" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
 
-                <div class="col-12 carrossel">
-                    <div class="bolinha-carrossel"></div>
-                    <div class="bolinha-carrossel"></div>
-                    <div class="bolinha-carrossel"></div>
-                    <div class="bolinha-carrossel"></div>
+                <div class="carousel-item">
+                    <section class="row" id="lancamentos">
+                        <div class="col-12 title-container">
+                            <h1>Lançamentos</h1>
+                        </div>
+
+                        <div class="col-12 col-xl-6 video_coluna">
+                            <div class="video">
+                                <iframe src="https://www.youtube.com/embed/Yh-XpUlDjJk"
+                                    title="Trailer Raya e o Último Dragão" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-xl-6">
+                            <h2>Raya e o Último Dragão</h2>
+                            <p class="sinopse">
+                                <bold>Sinopse:</bold> Há muito tempo, no mundo de fantasia de Kumandra, humanos e
+                                dragões viviam
+                                juntos em harmonia.
+                                Mas quando uma força maligna ameaçou a terra, os dragões se sacrificaram para salvar a
+                                humanidade. Agora, 500 anos depois,
+                                o mesmo mal voltou e cabe a uma guerreira solitária, Raya, rastrear o lendário último
+                                dragão
+                                para restaurar a terra despedaçada
+                                e seu povo dividido.
+                            </p>
+                            <div class="direcao-filme">
+                                <text>
+                                    <bold>Direção: </bold>Carlos López Estrada, Don Hall
+                                </text>
+                                <text>
+                                    <bold>Roteiro: </bold>Adele Lim, Qui Nguyen
+                                </text>
+                                <text>
+                                    <bold>Estreia: </bold>4 de março de 2021
+                                </text>
+                            </div>
+
+                            <div class="elenco">
+                                <p>
+                                    <bold>Elenco: </bold>
+                                </p>
+                                <text>Awkwafina</text><span class="separador-ator">|</span>
+                                <text>Kelly Marie Tran</text><span class="separador-ator">|</span>
+                                <text>Gemma Chan</text><span class="separador-ator">|</span>
+                                <text>Alan Tudyk</text>
+                            </div>
+
+                            <div class="avaliacao_estrelas">
+                                <p>
+                                    <bold>Avaliação: </bold>
+                                </p>
+                                <div class="estrelas">
+                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
+                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
+                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
+                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
+                                    <img class="review-star disable-star" src="assets/images/estrela.png" alt="Star" />
+                                </div>
+                            </div>
+                        </div>
                 </div>
-            </section>
+
+                <div class="carousel-item">
+                    <section class="row" id="lancamentos">
+                        <div class="col-12 title-container">
+                            <h1>Lançamentos</h1>
+                        </div>
+
+                        <div class="col-12 col-xl-6 video_coluna">
+                            <div class="video">
+                                <iframe src="https://www.youtube.com/embed/Yh-XpUlDjJk"
+                                    title="Trailer Raya e o Último Dragão" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-xl-6">
+                            <h2>Raya e o Último Dragão</h2>
+                            <p class="sinopse">
+                                <bold>Sinopse:</bold> Há muito tempo, no mundo de fantasia de Kumandra, humanos e
+                                dragões viviam
+                                juntos em harmonia.
+                                Mas quando uma força maligna ameaçou a terra, os dragões se sacrificaram para salvar a
+                                humanidade. Agora, 500 anos depois,
+                                o mesmo mal voltou e cabe a uma guerreira solitária, Raya, rastrear o lendário último
+                                dragão
+                                para restaurar a terra despedaçada
+                                e seu povo dividido.
+                            </p>
+                            <div class="direcao-filme">
+                                <text>
+                                    <bold>Direção: </bold>Carlos López Estrada, Don Hall
+                                </text>
+                                <text>
+                                    <bold>Roteiro: </bold>Adele Lim, Qui Nguyen
+                                </text>
+                                <text>
+                                    <bold>Estreia: </bold>4 de março de 2021
+                                </text>
+                            </div>
+
+                            <div class="elenco">
+                                <p>
+                                    <bold>Elenco: </bold>
+                                </p>
+                                <text>Awkwafina</text><span class="separador-ator">|</span>
+                                <text>Kelly Marie Tran</text><span class="separador-ator">|</span>
+                                <text>Gemma Chan</text><span class="separador-ator">|</span>
+                                <text>Alan Tudyk</text>
+                            </div>
+
+                            <div class="avaliacao_estrelas">
+                                <p>
+                                    <bold>Avaliação: </bold>
+                                </p>
+                                <div class="estrelas">
+                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
+                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
+                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
+                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
+                                    <img class="review-star disable-star" src="assets/images/estrela.png" alt="Star" />
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel-release" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-release" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
 
         <!-- Seção "Em destaque" -->
@@ -183,15 +323,11 @@
                                     </div>
 
                                     <div class="estrela-avaliacao-usuario">
-                                        <img class="estrela-review_usuario" src="assets/images/estrela.png"
-                                            alt="Star" />
-                                        <img class="estrela-review_usuario" src="assets/images/estrela.png"
-                                            alt="Star" />
-                                        <img class="estrela-review_usuario" src="assets/images/estrela.png"
-                                            alt="Star" />
-                                        <img class="estrela-review_usuario" src="assets/images/estrela.png"
-                                            alt="Star" />
-                                        <img class="estrela-review_usuario disable-star" src="assets/images/estrela.png"
+                                        <img class="review-star_usuario" src="assets/images/estrela.png" alt="Star" />
+                                        <img class="review-star_usuario" src="assets/images/estrela.png" alt="Star" />
+                                        <img class="review-star_usuario" src="assets/images/estrela.png" alt="Star" />
+                                        <img class="review-star_usuario" src="assets/images/estrela.png" alt="Star" />
+                                        <img class="review-star_usuario disable-star" src="assets/images/estrela.png"
                                             alt="Star" />
                                         <text>
                                             <bold>25/04/2021</bold><text>
@@ -216,15 +352,12 @@
 
 
                                     <div class="estrela-avaliacao-usuario">
-                                        <img class="estrela-review_usuario" src="assets/images/estrela.png"
+                                        <img class="review-star_usuario" src="assets/images/estrela.png" alt="Star" />
+                                        <img class="review-star_usuario" src="assets/images/estrela.png" alt="Star" />
+                                        <img class="review-star_usuario" src="assets/images/estrela.png" alt="Star" />
+                                        <img class="review-star_usuario disable-star" src="assets/images/estrela.png"
                                             alt="Star" />
-                                        <img class="estrela-review_usuario" src="assets/images/estrela.png"
-                                            alt="Star" />
-                                        <img class="estrela-review_usuario" src="assets/images/estrela.png"
-                                            alt="Star" />
-                                        <img class="estrela-review_usuario disable-star" src="assets/images/estrela.png"
-                                            alt="Star" />
-                                        <img class="estrela-review_usuario disable-star" src="assets/images/estrela.png"
+                                        <img class="review-star_usuario disable-star" src="assets/images/estrela.png"
                                             alt="Star" />
                                         <text>
                                             <bold>19/03/2021</bold><text>
@@ -247,16 +380,11 @@
                                     </div>
 
                                     <div class="estrela-avaliacao-usuario">
-                                        <img class="estrela-review_usuario" src="assets/images/estrela.png"
-                                            alt="Star" />
-                                        <img class="estrela-review_usuario" src="assets/images/estrela.png"
-                                            alt="Star" />
-                                        <img class="estrela-review_usuario" src="assets/images/estrela.png"
-                                            alt="Star" />
-                                        <img class="estrela-review_usuario" src="assets/images/estrela.png"
-                                            alt="Star" />
-                                        <img class="estrela-review_usuario" src="assets/images/estrela.png"
-                                            alt="Star" />
+                                        <img class="review-star_usuario" src="assets/images/estrela.png" alt="Star" />
+                                        <img class="review-star_usuario" src="assets/images/estrela.png" alt="Star" />
+                                        <img class="review-star_usuario" src="assets/images/estrela.png" alt="Star" />
+                                        <img class="review-star_usuario" src="assets/images/estrela.png" alt="Star" />
+                                        <img class="review-star_usuario" src="assets/images/estrela.png" alt="Star" />
                                         <text>
                                             <bold>15/02/2021</bold><text>
                                     </div>

@@ -1,5 +1,6 @@
 const apiDomain = "api.themoviedb.org";
 const apiKey = "f7ed622bcceb4e2d6181497fd8c61f36";
+var keyword;
 var quantity = 4;
 
 function loadMore() {
@@ -11,7 +12,6 @@ function loadMore() {
 }
 
 function movieDetails(movie_id) {
-  console.log(movie_id);
   let endpoint = `/3/movie/${movie_id}`;
   let params = `api_key=${apiKey}&language=pt-BR&append_to_response=videos,images`;
 
@@ -26,7 +26,9 @@ function movieDetails(movie_id) {
                         <div id="movie-details">
                             <div class="row" id="details-container">
                               <div class="col-12 col-xl-6">
-                                  <img class="mx-auto d-block" src="https://image.tmdb.org/t/p/original${movie.poster_path}" alt="${movie.original_title}"> 
+                                  <img class="mx-auto d-block" src="https://image.tmdb.org/t/p/original${
+                                    movie.poster_path
+                                  }" alt="${movie.original_title}"> 
                                 </div>
                                 
                                 <div class="col-12 col-xl-6">  
@@ -65,11 +67,42 @@ function movieDetails(movie_id) {
   });
 }
 
-function removeDetails(){
-  $('#movie-details').remove()
+function removeDetails() {
+  $("#movie-details").remove();
 }
 
-function searchMovie() {}
+function setKeywordSearch() {
+  keyword = $("#input-search").val();
+  localStorage.setItem("keyword-search", keyword);
+}
+
+function getSearchResults() {
+  keyword = localStorage.getItem("keyword-search");
+  
+  $("#section-search search-results").remove();
+  let endpoint = `/3/search/movie`;
+  let params = `api_key=${apiKey}&language=pt-BR&page=1&query=${keyword}&page=1&include_adult=false`;
+
+  let url = `https://${apiDomain}${endpoint}?${params}}`;
+
+  $.getJSON(url, (response) => {
+    const movies = response.results;
+
+    movies.forEach((movie, index) => {
+      const imgUrl = `https://image.tmdb.org/t/p/original${movie.poster_path}`;
+
+      $("#section-search").append(`
+                <div class="col-12 col-sm-6 col-lg-3 search-results">
+                    <a href="#" onclick="movieDetails('${
+                      movie.id
+                    }')" type="button">
+                        <img src="${imgUrl}" alt="${movie.original_title}">
+                    </button>
+                </div>
+            `);
+    });
+  });
+}
 
 function getTopRated() {
   $("#section-destaques .destaque").remove();
