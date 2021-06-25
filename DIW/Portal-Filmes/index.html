@@ -20,7 +20,7 @@
     <title>Portal de filmes</title>
 </head>
 
-<body onload="getTopRated()">
+<body onload="renderDynamicElements()">
 
 
     <!-- Navigation Bar-->
@@ -36,7 +36,7 @@
         <div class="collapse navbar-collapse col-6" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/index.html#lancamentos">Lançamentos</a>
+                    <a class="nav-link" href="/index.html#populares">Populares</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/index.html#section-destaques">Destaques</a>
@@ -52,219 +52,32 @@
                 </li>
             </ul>
         </div>
-        <form class="form-inline">
-            <input id="input-search" class="form-control mr-sm-2" type="search" placeholder="Pesquisar Filme" aria-label="Search" />
-        </form>
+
+        <input id="input-search" class="form-control mr-sm-2" type="search" placeholder="Pesquisar Filme"
+            aria-label="Search" />
+
         <a href="search.html" onclick="setKeywordSearch()">
             <img id="search-button" src="assets/images/search-icon.png" alt="Busca por filme.">
         </a>
     </nav>
 
 
-    <!-- Lançamentos -->
+    <!-- Populares -->
     <main>
-        <div id="carousel-release" class="carousel slide" data-ride="carousel">
+        <div id="carousel-popular" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carousel-release" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-release" data-slide-to="1"></li>
-                <li data-target="#carousel-release" data-slide-to="2"></li>
+                <li data-target="#carousel-popular" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-popular" data-slide-to="1"></li>
+                <li data-target="#carousel-popular" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <section class="row" id="lancamentos">
-                        <div class="col-12 title-container">
-                            <h1>Lançamentos</h1>
-                        </div>
 
-                        <div class="col-12 col-xl-6 video_coluna">
-                            <div class="video">
-                                <iframe src="https://www.youtube.com/embed/Yh-XpUlDjJk"
-                                    title="Trailer Raya e o Último Dragão" allowfullscreen></iframe>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-xl-6">
-                            <h2>Raya e o Último Dragão</h2>
-                            <p class="sinopse">
-                                <bold>Sinopse:</bold> Há muito tempo, no mundo de fantasia de Kumandra, humanos e
-                                dragões viviam
-                                juntos em harmonia.
-                                Mas quando uma força maligna ameaçou a terra, os dragões se sacrificaram para salvar a
-                                humanidade. Agora, 500 anos depois,
-                                o mesmo mal voltou e cabe a uma guerreira solitária, Raya, rastrear o lendário último
-                                dragão
-                                para restaurar a terra despedaçada
-                                e seu povo dividido.
-                            </p>
-                            <div class="direcao-filme">
-                                <text>
-                                    <bold>Direção: </bold>Carlos López Estrada, Don Hall
-                                </text>
-                                <text>
-                                    <bold>Roteiro: </bold>Adele Lim, Qui Nguyen
-                                </text>
-                                <text>
-                                    <bold>Estreia: </bold>4 de março de 2021
-                                </text>
-                            </div>
-
-                            <div class="elenco">
-                                <p>
-                                    <bold>Elenco: </bold>
-                                </p>
-                                <text>Awkwafina</text><span class="separador-ator">|</span>
-                                <text>Kelly Marie Tran</text><span class="separador-ator">|</span>
-                                <text>Gemma Chan</text><span class="separador-ator">|</span>
-                                <text>Alan Tudyk</text>
-                            </div>
-
-                            <div class="avaliacao_estrelas">
-                                <p>
-                                    <bold>Avaliação: </bold>
-                                </p>
-                                <div class="estrelas">
-                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
-                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
-                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
-                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
-                                    <img class="review-star disable-star" src="assets/images/estrela.png" alt="Star" />
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="carousel-item">
-                    <section class="row" id="lancamentos">
-                        <div class="col-12 title-container">
-                            <h1>Lançamentos</h1>
-                        </div>
-
-                        <div class="col-12 col-xl-6 video_coluna">
-                            <div class="video">
-                                <iframe src="https://www.youtube.com/embed/Yh-XpUlDjJk"
-                                    title="Trailer Raya e o Último Dragão" allowfullscreen></iframe>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-xl-6">
-                            <h2>Raya e o Último Dragão</h2>
-                            <p class="sinopse">
-                                <bold>Sinopse:</bold> Há muito tempo, no mundo de fantasia de Kumandra, humanos e
-                                dragões viviam
-                                juntos em harmonia.
-                                Mas quando uma força maligna ameaçou a terra, os dragões se sacrificaram para salvar a
-                                humanidade. Agora, 500 anos depois,
-                                o mesmo mal voltou e cabe a uma guerreira solitária, Raya, rastrear o lendário último
-                                dragão
-                                para restaurar a terra despedaçada
-                                e seu povo dividido.
-                            </p>
-                            <div class="direcao-filme">
-                                <text>
-                                    <bold>Direção: </bold>Carlos López Estrada, Don Hall
-                                </text>
-                                <text>
-                                    <bold>Roteiro: </bold>Adele Lim, Qui Nguyen
-                                </text>
-                                <text>
-                                    <bold>Estreia: </bold>4 de março de 2021
-                                </text>
-                            </div>
-
-                            <div class="elenco">
-                                <p>
-                                    <bold>Elenco: </bold>
-                                </p>
-                                <text>Awkwafina</text><span class="separador-ator">|</span>
-                                <text>Kelly Marie Tran</text><span class="separador-ator">|</span>
-                                <text>Gemma Chan</text><span class="separador-ator">|</span>
-                                <text>Alan Tudyk</text>
-                            </div>
-
-                            <div class="avaliacao_estrelas">
-                                <p>
-                                    <bold>Avaliação: </bold>
-                                </p>
-                                <div class="estrelas">
-                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
-                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
-                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
-                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
-                                    <img class="review-star disable-star" src="assets/images/estrela.png" alt="Star" />
-                                </div>
-                            </div>
-                        </div>
-                </div>
-
-                <div class="carousel-item">
-                    <section class="row" id="lancamentos">
-                        <div class="col-12 title-container">
-                            <h1>Lançamentos</h1>
-                        </div>
-
-                        <div class="col-12 col-xl-6 video_coluna">
-                            <div class="video">
-                                <iframe src="https://www.youtube.com/embed/Yh-XpUlDjJk"
-                                    title="Trailer Raya e o Último Dragão" allowfullscreen></iframe>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-xl-6">
-                            <h2>Raya e o Último Dragão</h2>
-                            <p class="sinopse">
-                                <bold>Sinopse:</bold> Há muito tempo, no mundo de fantasia de Kumandra, humanos e
-                                dragões viviam
-                                juntos em harmonia.
-                                Mas quando uma força maligna ameaçou a terra, os dragões se sacrificaram para salvar a
-                                humanidade. Agora, 500 anos depois,
-                                o mesmo mal voltou e cabe a uma guerreira solitária, Raya, rastrear o lendário último
-                                dragão
-                                para restaurar a terra despedaçada
-                                e seu povo dividido.
-                            </p>
-                            <div class="direcao-filme">
-                                <text>
-                                    <bold>Direção: </bold>Carlos López Estrada, Don Hall
-                                </text>
-                                <text>
-                                    <bold>Roteiro: </bold>Adele Lim, Qui Nguyen
-                                </text>
-                                <text>
-                                    <bold>Estreia: </bold>4 de março de 2021
-                                </text>
-                            </div>
-
-                            <div class="elenco">
-                                <p>
-                                    <bold>Elenco: </bold>
-                                </p>
-                                <text>Awkwafina</text><span class="separador-ator">|</span>
-                                <text>Kelly Marie Tran</text><span class="separador-ator">|</span>
-                                <text>Gemma Chan</text><span class="separador-ator">|</span>
-                                <text>Alan Tudyk</text>
-                            </div>
-
-                            <div class="avaliacao_estrelas">
-                                <p>
-                                    <bold>Avaliação: </bold>
-                                </p>
-                                <div class="estrelas">
-                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
-                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
-                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
-                                    <img class="review-star" src="assets/images/estrela.png" alt="Star" />
-                                    <img class="review-star disable-star" src="assets/images/estrela.png" alt="Star" />
-                                </div>
-                            </div>
-                        </div>
-                </div>
             </div>
-            <a class="carousel-control-prev" href="#carousel-release" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carousel-popular" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carousel-release" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carousel-popular" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -542,7 +355,7 @@
                                     <img src="assets/images/novidades/mortal-kombat.jpg" alt="Novidade 03">
                                     <div class="tags">
                                         <text class="tag-news">Mortal Kombat</text>
-                                        <text class="tag-news">Lançamentos</text>
+                                        <text class="tag-news">Populares</text>
                                     </div>
                                 </div>
                                 <div class="conteudo-novidade">
@@ -553,7 +366,6 @@
                                         Hasashi
                                         (Hiroyuki Sanada) sendo atacada de surpresa.
                                     </p>
-
                                 </div>
                             </div>
 

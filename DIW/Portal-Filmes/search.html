@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse col-6" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/index.html#lancamentos">Lançamentos</a>
+                    <a class="nav-link" href="/index.html#populares">Populares</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/index.html#section-destaques">Destaques</a>
@@ -51,10 +51,11 @@
                 </li>
             </ul>
         </div>
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar Filme" aria-label="Search" />
-        </form>
-        <a href="search.html" onclick="searchMovie()">
+
+        <input id="input-search" class="form-control mr-sm-2" type="search" placeholder="Pesquisar Filme"
+            aria-label="Search" />
+
+        <a href="search.html" onclick="setKeywordSearch()">
             <img id="search-button" src="assets/images/search-icon.png" alt="Busca por filme.">
         </a>
     </nav>
@@ -65,17 +66,6 @@
             <section class="row" id="section-search">
                 <div class="col-12 title-container">
                     <h1>Resultados</h1>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Botão dropdown
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Alguma ação</a>
-                            <a class="dropdown-item" href="#">Outra ação</a>
-                            <a class="dropdown-item" href="#">Alguma coisa aqui</a>
-                        </div>
-                    </div>
                 </div>
 
             </section>
