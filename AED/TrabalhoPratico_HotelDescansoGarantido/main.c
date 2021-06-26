@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
+
+#define HOSP_MAX 5
+#define HOSP_MIN 1
+#define PRECO_MAX 250.0
+#define PRECO_MIN 50.0
+
 
 typedef struct tm Data;
 
@@ -45,31 +52,34 @@ Data inicializaData() {
 
 	do {
 		printf("\nInforme o dia: ");
-		scanf("%i", nova_data.tm_mday);
-	} while (nova_data.tm_mday < 1 | nova_data.tm_mday > 31);
+		scanf("%i", &nova_data.tm_mday);
+	} while (nova_data.tm_mday < 1 || nova_data.tm_mday > 31);
 
 	do {
-		printf("\nInforme o dia: ");
-		scanf("%i", nova_data.tm_mon);
-	} while (nova_data.tm_mon < 1 | nova_data.tm_mon > 12);
+		printf("\nInforme o mes: ");
+		scanf("%i", &nova_data.tm_mon);
+	} while (nova_data.tm_mon < 1 || nova_data.tm_mon > 12);
 
-	printf("\nInforme o ano: ");
-	scanf("%i", nova_data.tm_year);
+	do {
+		printf("\nInforme o ano: ");
+		scanf("%i", &nova_data.tm_year);
+
+	} while (nova_data.tm_year < 1900);
 
 	return nova_data;
 }
 
 Quarto* inicializaQuartos() {
-	int const PRECO_MAX = 50, HOSP_MAX = 5;
-
 	Quarto quartos[10];
 
 	srand((unsigned)time(NULL));
 
 	for (int i = 0; i < 10; i++) {
 		quartos[i].numero = i;
-		quartos[i].quantidade_hospedes = rand() % HOSP_MAX;
-		quartos[i].diaria = ((float)rand() / (float)(RAND_MAX)) * PRECO_MAX;
+		do {
+			quartos[i].quantidade_hospedes = rand() % (HOSP_MAX - HOSP_MIN + 1) + HOSP_MIN;
+			quartos[i].diaria = ((float)rand() / (float)(RAND_MAX)) * PRECO_MAX;
+		} while (quartos[i].diaria <= PRECO_MIN);
 		strcpy(quartos[i].status, "Desocupado");
 	}
 
@@ -133,30 +143,30 @@ void cadastraFuncionario(Funcionario* lista_funcionarios, int* contador_funciona
 		}
 	} while (unico);
 
-	printf("Informe o nome do funcionario: ");
+	printf("\nInforme o nome do funcionario: ");
 	fgets(funcionario_novo.nome, 50, stdin);
 
-	printf("Informe o cargo do funcionario: ");
+	printf("\nInforme o cargo do funcionario: ");
 	fgets(funcionario_novo.cargo, 20, stdin);
 
-	printf("Informe o salario do funcionario: ");
+	printf("\nInforme o salario do funcionario: ");
 	scanf("%f", &funcionario_novo.salario);
 
-	printf("Informe o telefone do funcionario com DDD(apenas numeros, sem tracos, espacos ou parentes: ");
+	printf("\nInforme o telefone do funcionario com DDD(apenas numeros, sem tracos, espacos ou parentes: ");
 	fgets(funcionario_novo.telefone, 11, stdin);
 
-	printf("Codigo: %i", funcionario_novo.codigo);
-	printf("Nome: %s", funcionario_novo.nome);
-	printf("Endereco %s", funcionario_novo.cargo);
-	printf("Endereco %.2f", funcionario_novo.salario);
-	printf("Telefone: %s", funcionario_novo.telefone);
+	printf("\nCodigo: %i", funcionario_novo.codigo);
+	printf("\nNome: %s", funcionario_novo.nome);
+	printf("\nEndereco %s", funcionario_novo.cargo);
+	printf("\nEndereco %.2f", funcionario_novo.salario);
+	printf("\nTelefone: %s", funcionario_novo.telefone);
 
 
 	lista_funcionarios[*contador_funcionarios] = funcionario_novo;
 	*contador_funcionarios = *contador_funcionarios + 1;
 }
 
-void cadastraEstadia(Cliente cliente, Estadia* lista_estadias, int* contador_estadias, Cliente* quartos) {
+void cadastraEstadia(Cliente cliente, Estadia* lista_estadias, int* contador_estadias, Quarto* quartos) {
 	Estadia estadia_nova;
 
 	srand((unsigned)time(NULL));
@@ -171,19 +181,28 @@ void cadastraEstadia(Cliente cliente, Estadia* lista_estadias, int* contador_est
 	} while (unico);
 
 	printf("\n\nData de entrada...");
-	estadia_nova.data_entrada = inicializaData();
+	Data data_entrada = inicializaData();
+	data_entrada.tm_hour = 14;
+	data_entrada.tm_min = 00;
+
+	estadia_nova.data_entrada = data_entrada;
 
 	printf("\n\nData de saida (DD/MM/AAAA)...");
-	estadia_nova.data_saida = inicializaData();
+	Data data_saida = inicializaData();
+	data_saida.tm_hour = 12;
+	data_saida.tm_min = 00;
+
+	estadia_nova.data_saida = data_saida;
+
 
 	estadia_nova.quantidade_diarias = (int)(difftime(mktime(&estadia_nova.data_entrada), mktime(&estadia_nova.data_entrada)) / 86400);
 
-	printf("Codigo: %i", estadia_nova.codigo);
-	printf("Data de entrada: %s", asctime(&(estadia_nova.data_entrada)));
-	printf("Data de entrada %s", asctime(&(estadia_nova.data_saida)));
-	printf("Quantidaded de diarias %i", estadia_nova.quantidade_diarias);
-	printf("Codigo cliente: %i", estadia_nova.codigo_cliente);
-	printf("Codigo quarto: %i", estadia_nova.codigo_quarto);
+	printf("\nCodigo: %i", estadia_nova.codigo);
+	printf("\nData de entrada: %s", asctime(&(estadia_nova.data_entrada)));
+	printf("\nData de entrada %s", asctime(&(estadia_nova.data_saida)));
+	printf("\nQuantidaded de diarias %i", estadia_nova.quantidade_diarias);
+	printf("\nCodigo cliente: %i", estadia_nova.codigo_cliente);
+	printf("\nCodigo quarto: %i", estadia_nova.codigo_quarto);
 
 	lista_estadias[*contador_estadias] = estadia_nova;
 	*contador_estadias = *contador_estadias + 1;
@@ -193,7 +212,7 @@ Cliente pesquisaCliente(char* nome, Cliente* lista_clientes) {}
 
 Funcionario pesquisaFuncionario(char* nome, Funcionario* lista_funcionarios) {}
 
-Estadia* estadiasCliente(Cliente cliente_pesquisa) {
+void imprimeEstadia(Cliente cliente_pesquisa) {
 
 }
 
@@ -209,9 +228,8 @@ int main() {
 	Estadia lista_estadias[10];
 
 	printf("\n[+] Gerando quartos...\n");
-	Quarto* quartos = inicializaQuartos();
+	Quarto* lista_quartos = inicializaQuartos();
 
-	cadastraCliente(lista_clientes, &contador_clientes);
 	cadastraCliente(lista_clientes, &contador_clientes);
 	cadastraCliente(lista_clientes, &contador_clientes);
 
@@ -228,7 +246,6 @@ int main() {
 
 	cadastraFuncionario(lista_funcionarios, &contador_funcionarios);
 	cadastraFuncionario(lista_funcionarios, &contador_funcionarios);
-	cadastraFuncionario(lista_funcionarios, &contador_funcionarios);
 
 	printf("\nLista de funcionários: ");
 
@@ -242,5 +259,20 @@ int main() {
 
 	}
 
+
+	cadastraEstadia(lista_clientes[1], lista_estadias, &contador_estadias, lista_quartos);
+	cadastraEstadia(lista_clientes[2], lista_estadias, &contador_estadias, lista_quartos);
+
+	printf("\nLista de estadias: ");
+
+	for (int i = 0; i <= contador_estadias; i++) {
+		Estadia e = lista_estadias[i];
+		printf("\nCodigo: %i", e.codigo);
+		printf("\nData de entrada: %s", asctime(&(e.data_entrada)));
+		printf("\nData de entrada %s", asctime(&(e.data_saida)));
+		printf("\nQuantidaded de diarias %i", e.quantidade_diarias);
+		printf("\nCodigo cliente: %i", e.codigo_cliente);
+		printf("\nCodigo quarto: %i", e.codigo_quarto);
+	}
 	return 0;
 }
