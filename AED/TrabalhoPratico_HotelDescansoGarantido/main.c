@@ -208,16 +208,57 @@ void cadastraEstadia(Cliente cliente, Estadia* lista_estadias, int* contador_est
 	*contador_estadias = *contador_estadias + 1;
 }
 
-Cliente pesquisaCliente(char* nome, Cliente* lista_clientes) {}
-
-Funcionario pesquisaFuncionario(char* nome, Funcionario* lista_funcionarios) {}
-
-void imprimeEstadia(Cliente cliente_pesquisa) {
-
+Cliente pesquisaCliente(char* nome, Cliente* lista_clientes) {
+	Cliente c;
+	char nome_cliente[50];
+	puts("Nome do cliente desejado:");
+	fgets(nome_cliente, 50, stdin);
+	for (int i = 0; i < sizeof(lista_clientes); i++) {
+		if (nome_cliente == lista_clientes[i].nome) {
+			c = lista_clientes[i];
+		}
+	}
+	return c;
 }
 
-void calculaFidelidade() {
+Funcionario pesquisaFuncionario(char* nome, Funcionario* lista_funcionarios) {
+	Funcionario f;
+	char nome_funcionario[50];
+	puts("Nome do funcionario desejado:");
+	fgets(nome_funcionario, 50, stdin);
+	for (int i = 0; i < sizeof(lista_funcionarios); i++) {
+		if (nome_funcionario == lista_funcionarios[i].nome) {
+			f = lista_funcionarios[i];
+		}
+	}
 
+	return f;
+}
+
+void imprimeEstadia(Cliente c, Estadia* lista_estadias, int contador_estadias) {
+	printf("\nLista de estadias do clinte %s: ", c.nome);
+
+	for (int i = 0; i < sizeof(lista_estadias); i++) {
+		if (lista_estadias[i].codigo == c.codigo) {
+			Estadia e = lista_estadias[i];
+			printf("\nCodigo: %i", e.codigo);
+			printf("\nData de entrada: %s", asctime(&(e.data_entrada)));
+			printf("\nData de entrada %s", asctime(&(e.data_saida)));
+			printf("\nQuantidaded de diarias %i", e.quantidade_diarias);
+			printf("\nCodigo cliente: %i", e.codigo_cliente);
+			printf("\nCodigo quarto: %i", e.codigo_quarto);
+		}
+	}
+}
+
+void calculaFidelidade(Cliente c, Estadia* lista_estadias) {
+	int pontos = 0;
+	for (int i = 0; sizeof(lista_estadias); i++) {
+		if (lista_estadias[i].codigo_cliente == c.codigo) {
+			pontos += (lista_estadias[i].quantidade_diarias * 10);
+		}
+	}
+	printf("O cliente %s tem %i pontos.", c.nome, pontos);
 }
 
 int main() {
