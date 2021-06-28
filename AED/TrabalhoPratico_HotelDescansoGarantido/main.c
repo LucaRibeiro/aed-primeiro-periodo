@@ -69,21 +69,19 @@ Data inicializaData() {
 	return nova_data;
 }
 
-Quarto* inicializaQuartos() {
-	Quarto quartos[10];
+void* inicializaQuartos(Quarto* lista_quartos) {
+	char* desocupado = "Desocupado";
 
 	srand((unsigned)time(NULL));
 
 	for (int i = 0; i < 10; i++) {
-		quartos[i].numero = i;
+		lista_quartos[i].numero = i;
 		do {
-			quartos[i].quantidade_hospedes = rand() % (HOSP_MAX - HOSP_MIN + 1) + HOSP_MIN;
-			quartos[i].diaria = ((float)rand() / (float)(RAND_MAX)) * PRECO_MAX;
-		} while (quartos[i].diaria <= PRECO_MIN);
-		strcpy(quartos[i].status, "Desocupado");
+			lista_quartos[i].quantidade_hospedes = rand() % (HOSP_MAX - HOSP_MIN + 1) + HOSP_MIN;
+			lista_quartos[i].diaria = ((float)rand() / (float)(RAND_MAX)) * PRECO_MAX;
+		} while (lista_quartos[i].diaria <= PRECO_MIN);
+		strcpy(lista_quartos[i].status, desocupado);
 	}
-
-	return quartos;
 }
 
 void cadastraCliente(Cliente* lista_clientes, int* contador_clientes) {
@@ -94,7 +92,7 @@ void cadastraCliente(Cliente* lista_clientes, int* contador_clientes) {
 	int unico = 0;
 	do {
 		cliente_novo.codigo = rand();
-		for (int i = sizeof(lista_clientes); i >= 0;i--) {
+		for (int i = 0; i < *contador_clientes;i++) {
 			if (lista_clientes[i].codigo == cliente_novo.codigo) {
 				unico = 1;
 			}
@@ -118,8 +116,12 @@ void cadastraCliente(Cliente* lista_clientes, int* contador_clientes) {
 	printf("\nEndereco %s", cliente_novo.endereco);
 	printf("\nTelefone: %s", cliente_novo.telefone);
 
+	Cliente* temp = (Cliente*)malloc(sizeof(Cliente) * (*contador_clientes + 1));
 
-	lista_clientes[*contador_clientes] = cliente_novo;
+	temp = lista_clientes;
+	temp[*contador_clientes] = cliente_novo;
+
+	lista_clientes = temp;
 	*contador_clientes = *contador_clientes + 1;
 }
 
@@ -144,23 +146,27 @@ void cadastraFuncionario(Funcionario* lista_funcionarios, int* contador_funciona
 	printf("\nInforme o nome do funcionario: ");
 	fgets(funcionario_novo.nome, 50, stdin);
 
+	printf("\nInforme o telefone do funcionario com DDD(apenas numeros, sem tracos, espacos ou parentes: ");
+	fgets(funcionario_novo.telefone, 11, stdin);
+
 	printf("\nInforme o cargo do funcionario: ");
 	fgets(funcionario_novo.cargo, 20, stdin);
 
 	printf("\nInforme o salario do funcionario: ");
 	scanf("%f", &funcionario_novo.salario);
 
-	printf("\nInforme o telefone do funcionario com DDD(apenas numeros, sem tracos, espacos ou parentes: ");
-	fgets(funcionario_novo.telefone, 11, stdin);
-
 	printf("\nCodigo: %i", funcionario_novo.codigo);
 	printf("\nNome: %s", funcionario_novo.nome);
-	printf("\nEndereco %s", funcionario_novo.cargo);
-	printf("\nEndereco %.2f", funcionario_novo.salario);
+	printf("\nCargo %s", funcionario_novo.cargo);
+	printf("\nSalario %.2f", funcionario_novo.salario);
 	printf("\nTelefone: %s", funcionario_novo.telefone);
 
+	Funcionario* temp = (Funcionario*)malloc(sizeof(Funcionario) * (*contador_funcionarios + 1));
 
-	lista_funcionarios[*contador_funcionarios] = funcionario_novo;
+	temp = lista_funcionarios;
+	temp[*contador_funcionarios] = funcionario_novo;
+
+	lista_funcionarios = temp;
 	*contador_funcionarios = *contador_funcionarios + 1;
 }
 
@@ -201,20 +207,19 @@ void cadastraEstadia(Cliente c, Quarto q, Estadia* lista_estadias, int* contador
 	estadia_nova.codigo_cliente = c.codigo;
 	estadia_nova.codigo_quarto = q.numero;
 
-	printf("\nCodigo: %i", estadia_nova.codigo);
-	printf("\nData de entrada: %s", asctime(&(estadia_nova.data_entrada)));
-	printf("\nData de entrada %s", asctime(&(estadia_nova.data_saida)));
-	printf("\nQuantidaded de diarias %i", estadia_nova.quantidade_diarias);
-	printf("\nCodigo cliente: %i", estadia_nova.codigo_cliente);
-	printf("\nCodigo quarto: %i", estadia_nova.codigo_quarto);
+	Estadia* temp = (Estadia*)malloc(sizeof(Estadia) * (*contador_estadias + 1));
 
-	lista_estadias[*contador_estadias] = estadia_nova;
+	temp = lista_estadias;
+	temp[*contador_estadias] = estadia_nova;
+
+	lista_estadias = temp;
+	lista_estadias = temp;
 	*contador_estadias = *contador_estadias + 1;
+
 }
 
-// Funcao que percorre a lista de clientes imprimindo as infomações de cada um 
-void imprimeCliente(Cliente* lista_clientes, int contador_clientes) {
-	printf("\nLista de clientes: ");
+void imprimeClientes(Cliente* lista_clientes, int contador_clientes) {
+	printf("\n-------Lista de clientes-------");
 
 	for (int i = 0; i < contador_clientes; i++) {
 		Cliente c = lista_clientes[i];
@@ -225,26 +230,26 @@ void imprimeCliente(Cliente* lista_clientes, int contador_clientes) {
 	}
 }
 
-// Funcao que percorre a lista de funcionarios imprimindo as infomações de cada um 
 void imprimeFuncionarios(Funcionario* lista_funcionarios, int contador_funcionarios) {
-	printf("\nLista de funcionários: ");
+	printf("\n-------Lista de funcionários-------");
 
 	for (int i = 0; i < contador_funcionarios; i++) {
 		Funcionario f = lista_funcionarios[i];
 		printf("\nCodigo: %i", f.codigo);
 		printf("\nNome: %s", f.nome);
-		printf("\nEndereco %s", f.cargo);
-		printf("\nEndereco %.2f", f.salario);
+		printf("\nCargo %s", f.cargo);
+		printf("\nSalario %.2f", f.salario);
 		printf("\nTelefone: %s", f.telefone);
 	}
 }
 
 void imprimeEstadia(Cliente c, Estadia* lista_estadias, int contador_estadias) {
-	printf("\nLista de estadias do clinte %s: ", c.nome);
+	printf("\n-------Lista de estadias do cliente %s-------", c.nome);
 
-	for (int i = 0; i < sizeof(lista_estadias); i++) {
-		if (lista_estadias[i].codigo == c.codigo) {
+	for (int i = 0; i < contador_estadias; i++) {
+		if (lista_estadias[i].codigo_cliente == c.codigo) {
 			Estadia e = lista_estadias[i];
+
 			printf("\nCodigo: %i", e.codigo);
 			printf("\nData de entrada: %s", asctime(&(e.data_entrada)));
 			printf("\nData de entrada %s", asctime(&(e.data_saida)));
@@ -262,13 +267,20 @@ Cliente pesquisaCliente(Cliente* lista_clientes, int contador_clientes) {
 	// remove lixo de memória
 	while (getchar() != '\n');
 
-	puts("Nome do cliente desejado:");
+	printf("\nNome do cliente desejado: ");
 	fgets(nome_cliente, 50, stdin);
+
 	for (int i = 0; i < contador_clientes; i++) {
-		if (strcmp(nome_cliente, lista_clientes[i].nome)) {
+		if (strcmp(nome_cliente, lista_clientes[i].nome) == 0) {
 			c = lista_clientes[i];
 		}
 	}
+
+	printf("\nCodigo: %i", c.codigo);
+	printf("\nNome: %s", c.nome);
+	printf("\nEndereco: %s", c.endereco);
+	printf("\nTelefone: %s", c.telefone);
+
 	return c;
 }
 
@@ -279,22 +291,26 @@ Funcionario pesquisaFuncionario(Funcionario* lista_funcionarios) {
 	// remove lixo de memória
 	while (getchar() != '\n');
 
-	puts("Nome do funcionario desejado:");
+	printf("\nNome do funcionario desejado:");
 	fgets(nome_funcionario, 50, stdin);
 	for (int i = 0; i < sizeof(lista_funcionarios); i++) {
-		if (strcmp(nome_funcionario, lista_funcionarios[i].nome)) {
+		if (strcmp(nome_funcionario, lista_funcionarios[i].nome) == 0) {
 			f = lista_funcionarios[i];
 		}
 	}
+	printf("\nCodigo: %i", f.codigo);
+	printf("\nNome: %s", f.nome);
+	printf("\nCargo: %s", f.cargo);
+	printf("\nSalario: %.2f", f.salario);
+	printf("\nTelefone: %s", f.telefone);
 
 	return f;
 }
 
-
 Quarto pesquisaQuarto(Quarto* lista_quartos) {
-	puts("Lista de quartos:");
-	for (int i = 0; i < sizeof(lista_quartos); i++) {
-		if (strcmp(lista_quartos[i].status, "Desocupado")) {
+	printf("\n\n-------Lista de quartos-------");
+	for (int i = 0; i < 10; i++) {
+		if (strcmp(lista_quartos[i].status, "Desocupado") == 0) {
 			printf("\n\nNumero: %i", (lista_quartos[i].numero + 1));
 			printf("\nHospedes: %i", lista_quartos[i].quantidade_hospedes);
 			printf("\nDiaria: %.2f", lista_quartos[i].diaria);
@@ -304,16 +320,16 @@ Quarto pesquisaQuarto(Quarto* lista_quartos) {
 
 	int numero_quarto;
 	do {
-		puts("Informe o numero do quarto: ");
+		printf("\nInforme o numero do quarto: ");
 		scanf("%i", &numero_quarto);
-	} while (numero_quarto < sizeof(lista_quartos) && numero_quarto <= 0 && strcmp(lista_quartos[numero_quarto].status, "Desocupado"));
+	} while (numero_quarto < sizeof(lista_quartos) && numero_quarto <= 0 && strcmp(lista_quartos[numero_quarto].status, "Desocupado") == 0);
 
 	strcpy(lista_quartos[numero_quarto].status, "Ocupado");
 
 	return lista_quartos[numero_quarto];
 }
 
-void calculaFidelidade(Cliente c, Estadia* lista_estadias) {
+void checkout(Cliente c, Estadia* lista_estadias) {
 	int pontos = 0;
 	for (int i = 0; sizeof(lista_estadias); i++) {
 		if (lista_estadias[i].codigo_cliente == c.codigo) {
@@ -325,20 +341,23 @@ void calculaFidelidade(Cliente c, Estadia* lista_estadias) {
 
 
 int main() {
-	int contador_clientes = 0, contador_funcionarios = 0, contador_estadias = 0;
-	int opcao = 0;
+	int opcao, contador_clientes = 0, contador_funcionarios = 0, contador_estadias = 0, erro = 1;
 
-	Cliente lista_clientes[10];
-	Funcionario lista_funcionarios[10];
-	Estadia lista_estadias[10];
+	FILE* cliente_arq, * funcionario_arq, * estadia_arq, * contadores_arq;
 
-	printf("\n[+] Gerando quartos...\n");
-	Quarto* lista_quartos = inicializaQuartos();
+	Cliente* lista_clientes = (Cliente*)malloc(sizeof(Cliente) * (contador_clientes + 1));;
+	Funcionario* lista_funcionarios = (Funcionario*)malloc(sizeof(Funcionario) * (contador_funcionarios + 1));
+	Estadia* lista_estadias = (Estadia*)malloc(sizeof(Estadia) * (contador_estadias + 1));
+	Quarto* lista_quartos = (Quarto*)malloc(sizeof(Quarto) * 10);
+
+	inicializaQuartos(lista_quartos);
 
 	Quarto q;
 	Cliente c;
 
 	do {
+		opcao = 0;
+
 		puts("\n\n--------Menu de opções--------");
 		puts("1 - Cadastrar cliente");
 		puts("2 - Cadastrar funcioario");
@@ -348,13 +367,16 @@ int main() {
 		puts("6 - Listar estadias");
 		puts("7 - Pesquisar cliente");
 		puts("8 - Pesquisar funcionário");
-		puts("9 - Calcular fidelidade do cliente");
-		puts("0 - SAIR");
+		puts("9 - Checkout");
+		puts("0 - SALVAR E SAIR");
 		puts("------------------------------");
 		printf("Digite a opcao: ");
 		scanf("%i", &opcao);
 
 		switch (opcao) {
+		case 0:
+			puts("Bye Bye!");
+			break;
 		case 1:
 			cadastraCliente(lista_clientes, &contador_clientes);
 			break;
@@ -367,7 +389,7 @@ int main() {
 			cadastraEstadia(c, q, lista_estadias, &contador_estadias);
 			break;
 		case 4:
-			imprimeCliente(lista_clientes, contador_clientes);
+			imprimeClientes(lista_clientes, contador_clientes);
 			break;
 		case 5:
 			imprimeFuncionarios(lista_funcionarios, contador_funcionarios);
@@ -384,13 +406,48 @@ int main() {
 			break;
 		case 9:
 			c = pesquisaCliente(lista_clientes, contador_clientes);
-			calculaFidelidade(c, lista_estadias);
+			checkout(c, lista_estadias);
 			break;
 		default:
-			puts("Opcao invalida.");
+			puts("Opcao invalida... \n Saindo.");
 			break;
 		}
 	} while (opcao != 0);
+
+
+	// salva contadores
+	if (contadores_arq = fopen("contadores.txt", "w")) {
+		fprintf(contadores_arq, "%i %i %i", contador_clientes, contador_funcionarios, contador_estadias);
+		fclose(contadores_arq);
+
+		// salva clientes em arqvuivo
+		cliente_arq = fopen("clientes.txt", "w");
+
+		fwrite(&contador_clientes, sizeof(int), 1, cliente_arq);
+		fwrite(lista_clientes, sizeof(Cliente), contador_clientes, cliente_arq);
+
+		fclose(cliente_arq);
+
+		// salva funcionários em arqvuivo
+		funcionario_arq = fopen("funcionarios.txt", "w");
+
+		fwrite(&contador_funcionarios, sizeof(int), 1, cliente_arq);
+		fwrite(lista_funcionarios, sizeof(Funcionario), contador_funcionarios, cliente_arq);
+
+		fclose(funcionario_arq);
+
+		// salva estadias em arqvuivo
+		estadia_arq = fopen("estadias.txt", "w");
+
+		fwrite(&contador_estadias, sizeof(int), 1, cliente_arq);
+		fwrite(lista_estadias, sizeof(Estadia), contador_estadias, cliente_arq);
+
+		fclose(estadia_arq);
+
+	}
+	else {
+		puts("Não foi possivel salvar os dados");
+	}
 
 	return 0;
 }
