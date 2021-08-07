@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/loginInfo.js"></script>
+
+  <script>
+    function addDarkmodeWidget() {
+      new Darkmode().showWidget();
+    }
+    window.addEventListener('load', addDarkmodeWidget);
+
+  </script>
+
+</head>
+
+<body>
+  <header class="header container-fluid">
+    <div class="row d-flex justify-content-center header_area">
+      <div class="col-3">
+        <img src="assets/logo.png" class="logo">
+      </div>
+      <div class="col-9 menu_area header_area">
+        <nav class="nav nav-pills d-flex justify-content-center justify-content-around">
+          <a class="flex-sm-fill text-sm-center nav-link" href="index.html">Home</a>
+          <a class="flex-sm-fill text-sm-center nav-link" href="login.html">Login</a>
+          <a class="flex-sm-fill text-sm-center nav-link" href="buscas.html">Buscas</a>
+          <a class="flex-sm-fill text-sm-center nav-link" href="favoritos.html">Favoritos</a>
+          <a class="flex-sm-fill text-sm-center nav-link" href="sobre.html">Sobre</a>
+          <span class="flex-sm-fill text-sm-center nav-link text-white">Bem-vindo<br><b class="text-success text-decoration-underline font-italic nomeLogin"></b></span>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Card -->
+  <div class="container">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb cardNot">
+              <img class="card-img-top" src="assets/cnn.png" height="300px" alt="Card image cap">
+              <div class="card-body mb">
+                <h5 class="card-title">Site de Notícias</h5>
+                <p class="card-text">CNN é um canal americano de notícias. A rede é conhecida por sua dramática
+                  cobertura ao vivo de notícias de última hora, algumas das quais atraíram críticas como excessivamente
+                  sensacionalistas e por seus esforços de ser apartidária.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb cardNot">
+              <img class="card-img-top" src="assets/g1.png" height="300px" alt="Card image cap">
+              <div class="card-body mb">
+                <h5 class="card-title">Site de Notícias</h5>
+                <p class="card-text">G1 é um portal de notícias brasileiro mantido pelo Grupo Globo e sob orientação da
+                  Central Globo de Jornalismo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb cardNot">
+              <img class="card-img-top" src="assets/bbc.png" height="300px" alt="Card image cap">
+              <div class="card-body mb">
+                <h5 class="card-title">Site de Notícias</h5>
+                <p class="card-text">A British Broadcasting Corporation, mais conhecida pela sigla BBC, é uma corporação
+                  pública de rádio e televisão do Reino Unido fundada em 1922.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Card -->
+  <!--dropdown button-->
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      Categorias
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Acadêmico</a>
+      <a class="dropdown-item" href="#">Política</a>
+      <a class="dropdown-item" href="#">Economia</a>
+    </div>
+  </div>
+  <!--dropdown button-->
+  <!-- Copyright-->
+  <div class="container-fluid">
+    <p class="text-center m-0 py-1">
+      © 2021 Copyright - Trabalho Interdisciplinar - Interfaces Web <a href="https://getbootstrap.com/"
+        class="text-white"></a>
+    </p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/sharer.js/latest/sharer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="scripts/app.js"></script>
+
+</body>
+
+</html>
