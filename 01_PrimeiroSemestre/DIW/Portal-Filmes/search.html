@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts Google-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <title>Portal de filmes</title>
+</head>
+
+<body onload="getSearchResults()">
+
+    <!-- Navigation Bar-->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand col" href="/index.html#">
+            <img src="./assets/images/logo.png" class="logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse col-6" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html#populares">Populares</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html#section-destaques">Destaques</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html#avaliacoes">Avaliações</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html#entrevistas_e_makingof">Entrevistas & Making Of</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html#novidades">Novidades</a>
+                </li>
+            </ul>
+        </div>
+
+        <input id="input-search" class="form-control mr-sm-2" type="search" placeholder="Pesquisar Filme"
+            aria-label="Search" />
+
+        <a href="search.html" onclick="setKeywordSearch()">
+            <img id="search-button" src="assets/images/search-icon.png" alt="Busca por filme.">
+        </a>
+    </nav>
+
+    <!-- Resultados da pesquisa -->
+    <div class="container-claro">
+        <div class="container">
+            <section class="row" id="section-search">
+                <div class="col-12 title-container">
+                    <h1>Resultados</h1>
+                </div>
+
+            </section>
+        </div>
+
+
+        <footer>
+            <text class="col">Copyright 2021 - Disciplina de Desenvolvimento de interface Web - <bold> ICEI PUC Minas
+                    <bold>
+            </text>
+            <img class="logo" src="./assets/images/logo.png" class="logo" />
+        </footer>
+
+        <!-- Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+            </script>
+
+        <!-- API The Movie DB -->
+        <script src="./script/api-tmdb.js"></script>
+
+</body>
+
+</html>
