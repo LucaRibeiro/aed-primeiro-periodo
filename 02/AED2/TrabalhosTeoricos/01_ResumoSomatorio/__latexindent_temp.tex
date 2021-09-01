@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+\usepackage{listing}
+\usepackage{graphicx,url}
+\usepackage[utf8]{inputenc}  
+  
+\sloppy
+
+\title{AED II - Resumo somatórios}
+
+\author{Luca Ribeiro Schettino Regne}
+
+\begin{document} 
+
+\maketitle
+
+O somatório, comumente representado pelo símbolo $\sum$, é uma fórmula matemática 
+usada para representar uma sequênca de adições entre números de uma progressão. Isto é,
+dado um grupo "n" igual a $x_{1}$, $x_{2}$, $x_{3}$, $x_{4}$, ... , $x_{n}$, podemos
+representar matemáticamente sua coma como:\\
+\begin{center}
+    $\sum^{n}_{i = 1}(x_i) = x_{1} + x_{2} + x_{3} + x_{4} + ... + x_{n} $
+\end{center}\\
+além disso, o somátorio possui algumas propriedades que estão listadas a seguir:
+\begin{enumerate}
+    \item ${\displaystyle \sum _{i=m}^{n}\alpha x_{i}=\alpha \sum _{i=m}^{n}x_{i}}$
+    \item ${\displaystyle \sum _{i=m}^{n}(x_{i}\pm y_{i})=\sum _{i=m}^{n}x_{i}\pm \sum _{i=m}^{n}y_{i}}$
+    \item ${\displaystyle \sum _{i=m}^{m}x_{i}=x_{m}}$
+    \item ${\displaystyle \sum _{i=m}^{n}x_{i}=\sum _{i=m}^{p}x_{i}+\sum _{i=p+1}^{n}x_{i},\quad \forall m\leq p\leq n} $
+    \item ${\displaystyle \sum _{i=m}^{n}x_{i}=\sum _{i=m+p}^{n+p}x_{i-p}}$
+    \item ${\displaystyle \sum _{i=m}^{n}(x_{i+1}-x_{i})=x_{n+1}-x_{m}}$
+    \item ${\displaystyle \sum _{i=m}^{n}\sum _{j=k}^{l}x_{i}y_{j}=\sum _{i=m}^{n}x_{i}\sum _{j=k}^{l}y_{j}} $
+    \item ${\displaystyle \left|\sum _{i=m}^{n}x_{i}\right|\leq \sum _{i=m}^{n}|x_{i}|}$
+    \item ${\displaystyle \sum _{n=0}^{t}x_{2n}+\sum _{n=0}^{t}x_{2n+1}=\sum _{n=0}^{2t+1}x_{n}}$
+    \item ${\displaystyle \sum _{n=0}^{t}\sum _{i=0}^{z-1}x_{z\cdot n+i}=\sum _{n=0}^{z\cdot t+z-1}x_{n}}$
+\end{enumerate}
+
+\bibliographystyle{sbc}
+\bibliography{sbc-template}
+
+\end{document}
