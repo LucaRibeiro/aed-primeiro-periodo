@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="scripts/app.js"></script>
+
+    <script>
+        function addDarkmodeWidget() {
+            new Darkmode().showWidget();
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+
+    </script>
+</head>
+
+<body>
+    <header class="header container-fluid">
+        <div class="row d-flex justify-content-center header_area">
+            <div class="col-3">
+                <img src="assets/logo.png" class="logo">
+            </div>
+            <div class="col-9 menu_area header_area">
+                <nav class="nav nav-pills d-flex justify-content-center justify-content-around">
+                    <a class="flex-sm-fill text-sm-center nav-link" href="index.html">Home</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="login.html">Login</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="buscas.html">Buscas</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="favoritos.html">Favoritos</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="sobre.html">Sobre</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div id="login">
+        <h1>Faça seu Login</h1>
+        <form id="register-form">
+            <div class="full-box">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2"
+                    data-email-validate>
+            </div>
+            <div class="full-box">
+                <label for="lastname">Senha</label>
+                <input type="password" name="password" id="password" placeholder="Digite sua senha"
+                    data-password-validate data-required>
+            </div>
+            <div class="form-group">
+                <label for="remember-me" class="text-info"><span>Manter Conectado </span> <span><input id="remember-me"
+                            name="remember-me" type="checkbox"></span></label><br>
+                <div class="full-box">
+                    <button id="login-button" onclick="login()"> Entrar </button>
+                </div>
+            </div>
+            <div id="register-link" class="text-right">
+                <a href="cadastro.html" class="text-info">Cadastre aqui</a>
+        </form>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/sharer.js/latest/sharer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/app.js"></script>
+
+
+</body>
+
+</html>
